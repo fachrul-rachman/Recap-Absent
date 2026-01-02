@@ -1,0 +1,21 @@
+{
+  "name": "greatday-attendance-recap",
+  "version": "1.0.0",
+  "description": "CLI tools to generate GreatDayHR attendance recap and send to Discord.",
+  "type": "module",
+  "main": "src/cli.mjs",
+  "scripts": {
+    "daily": "node src/cli.mjs daily",
+    "weekly": "node src/cli.mjs weekly",
+    "monthly": "node src/cli.mjs monthly",
+    "serve": "node src/server.mjs"
+  },
+  "keywords": [
+    "greatdayhr",
+    "attendance",
+    "discord",
+    "cli"
+  ],
+  "author": "",
+  "license": "ISC"
+}

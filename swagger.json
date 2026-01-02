@@ -1,0 +1,5239 @@
+{
+  "openapi": "3.0.0",
+  "paths": {
+    "/accurate/send-journal": {
+      "post": {
+        "operationId": "AccurateController_sendJournal",
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/employees": {
+      "post": {
+        "operationId": "Get Employee",
+        "summary": "",
+        "description": "This API is used to get all employee detail list. You can add limit, paging, employee ID, employee number, or query parameters to filter the response.",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FilterEmployeeDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseEmployee"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request, invalid parameters or JSON body"
+          },
+          "401": {
+            "description": "Unauthorized, invalid Access Token"
+          },
+          "429": {
+            "description": "Too many requests"
+          }
+        },
+        "tags": [
+          "Employee"
+        ]
+      }
+    },
+    "/employees/sfemp": {
+      "post": {
+        "operationId": "Get Employee",
+        "summary": "",
+        "description": "This API is used to get all employee detail list. You can add limit, paging, employee ID, employee number, or query parameters to filter the response.",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FilterEmployeeDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ViewGoEmp"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request, invalid parameters or JSON body"
+          },
+          "401": {
+            "description": "Unauthorized, invalid Access Token"
+          },
+          "429": {
+            "description": "Too many requests"
+          }
+        },
+        "tags": [
+          "Employee SFEMP"
+        ]
+      }
+    },
+    "/employees/axemp": {
+      "post": {
+        "operationId": "Get Employee",
+        "summary": "",
+        "description": "This API is used to get all employee detail list. You can add limit, paging, employee ID, employee number, or query parameters to filter the response.",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FilterEmployeeDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ViewGoEmp"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request, invalid parameters or JSON body"
+          },
+          "401": {
+            "description": "Unauthorized, invalid Access Token"
+          },
+          "429": {
+            "description": "Too many requests"
+          }
+        },
+        "tags": [
+          "Employee AXEMP"
+        ]
+      }
+    },
+    "/employees/add": {
+      "post": {
+        "operationId": "Add Employee",
+        "summary": "",
+        "description": "This API is used to add new employee",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ParamsEmployeeDto"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ResponseAddUpdate"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request, invalid parameters or JSON body"
+          },
+          "401": {
+            "description": "Unauthorized, invalid Access Token"
+          },
+          "429": {
+            "description": "Too many requests"
+          }
+        },
+        "tags": [
+          "Employee"
+        ]
+      }
+    },
+    "/employees/update": {
+      "post": {
+        "operationId": "Update Employee",
+        "summary": "",
+        "description": "This API is used to update existing employee data and career",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/UpdateEmployeeGDE"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ResponseAddUpdate"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request, invalid parameters or JSON body"
+          },
+          "401": {
+            "description": "Unauthorized, invalid Access Token"
+          },
+          "429": {
+            "description": "Too many requests"
+          }
+        },
+        "tags": [
+          "Employee"
+        ]
+      }
+    },
+    "/employees/kohler/add": {
+      "post": {
+        "operationId": "EmployeesController_addEmployeeGDP",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/employees/kohler/update": {
+      "post": {
+        "operationId": "EmployeesController_updateEmployeeGDP",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateEmpPayload"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/employees/kohler/allowanceUpdate": {
+      "post": {
+        "operationId": "EmployeesController_updateAllowanceGDP",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/attendances": {
+      "post": {
+        "operationId": "Get Attendance",
+        "summary": "",
+        "description": "This API is used to get all employee attendance list. You can add limit, paging, employee ID, employee number, to filter the response.",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FilterAttendanceDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Ttadattendance"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request, invalid parameters or JSON body"
+          },
+          "401": {
+            "description": "Unauthorized, invalid Access Token"
+          },
+          "429": {
+            "description": "Too many requests"
+          }
+        },
+        "tags": [
+          "Attendance"
+        ]
+      }
+    },
+    "/attendances/add": {
+      "post": {
+        "operationId": "Add Attendance",
+        "summary": "",
+        "description": "This API is used to send attendance data",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AttendanceRecordtimeValidator"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad request, invalid parameters or JSON body"
+          },
+          "401": {
+            "description": "Unauthorized, invalid Access Token"
+          },
+          "429": {
+            "description": "Too many requests"
+          }
+        },
+        "tags": [
+          "Attendance"
+        ]
+      }
+    },
+    "/attendances/byPeriod": {
+      "get": {
+        "operationId": "Get Attendance by Period",
+        "summary": "",
+        "description": "This API is used to get attendance data by period date.",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "startDate",
+            "required": true,
+            "in": "query",
+            "description": "Start Date (ex: 2019-01-01)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "endDate",
+            "required": true,
+            "in": "query",
+            "description": "End Date (ex: 2019-12-31)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "empId",
+            "required": false,
+            "in": "query",
+            "description": "Employee Id",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "empNo",
+            "required": false,
+            "in": "query",
+            "description": "Employee No.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "orgUnit",
+            "required": false,
+            "in": "query",
+            "description": "Organization Unit (Optional)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sort",
+            "required": false,
+            "in": "query",
+            "description": "Sorting Option (ex: asc, desc). Ascending as default.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AttendanceByPeriod"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request, invalid parameters or JSON body"
+          },
+          "401": {
+            "description": "Unauthorized, invalid Access Token"
+          },
+          "429": {
+            "description": "Too many requests"
+          }
+        },
+        "tags": [
+          "Attendance"
+        ]
+      }
+    },
+    "/attendances/status": {
+      "get": {
+        "operationId": "Get Employee Attendance Status",
+        "summary": "",
+        "description": "This API is used to get attendance status summary by period date.",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "startDate",
+            "required": true,
+            "in": "query",
+            "description": "Start Date (ex: 2019-01-01). If empty, will return last month data",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "endDate",
+            "required": true,
+            "in": "query",
+            "description": "End Date (ex: 2019-12-31). If empty, will return last month data",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "empId",
+            "required": false,
+            "in": "query",
+            "description": "Employee Id",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "empNo",
+            "required": false,
+            "in": "query",
+            "description": "Employee No.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sort",
+            "required": false,
+            "in": "query",
+            "description": "Sorting Option (ex: asc, desc). Ascending as default.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "required": false,
+            "in": "query",
+            "description": "Page Number",
+            "schema": {
+              "type": "number"
+            }
+          },
+          {
+            "name": "limit",
+            "required": false,
+            "in": "query",
+            "description": "Limit the number of data each page (Max. 100)",
+            "schema": {
+              "type": "number"
+            }
+          },
+          {
+            "name": "employmentStatus",
+            "required": false,
+            "in": "query",
+            "description": "Employment Status \"ACTIVE\" or \"ALL\". \"ACTIVE\" as default",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AttendanceStatus"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request, invalid parameters or JSON body"
+          },
+          "401": {
+            "description": "Unauthorized, invalid Access Token"
+          },
+          "429": {
+            "description": "Too many requests"
+          }
+        },
+        "tags": [
+          "Attendance"
+        ]
+      }
+    },
+    "/attendances/att-status": {
+      "get": {
+        "operationId": "Get Master Attendance Status",
+        "summary": "",
+        "description": "This API is used to get attendance status.",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MasterAttendanceStatus"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request, invalid parameters or JSON body"
+          },
+          "401": {
+            "description": "Unauthorized, invalid Access Token"
+          },
+          "429": {
+            "description": "Too many requests"
+          }
+        },
+        "tags": [
+          "Attendance"
+        ]
+      }
+    },
+    "/attendances/shift-daily": {
+      "post": {
+        "operationId": "Shift Daily",
+        "summary": "",
+        "description": "This API is used to get all shift daily detail list. You can add limit, paging, or query parameters to filter the response.",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ShiftDailyDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Ttamshiftdaily"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request, invalid parameters or JSON body"
+          },
+          "401": {
+            "description": "Unauthorized, invalid Access Token"
+          },
+          "429": {
+            "description": "Too many requests"
+          }
+        },
+        "tags": [
+          "Attendance"
+        ]
+      }
+    },
+    "/attendances/shift-pattern": {
+      "post": {
+        "operationId": "Shift Pattern",
+        "summary": "",
+        "description": "This API is used to get all shift pattern detail list. You can add limit, paging, or query parameters to filter the response.",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ShiftPatternDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Ttamshiftgroup"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request, invalid parameters or JSON body"
+          },
+          "401": {
+            "description": "Unauthorized, invalid Access Token"
+          },
+          "429": {
+            "description": "Too many requests"
+          }
+        },
+        "tags": [
+          "Attendance"
+        ]
+      }
+    },
+    "/company/employmentstatus": {
+      "post": {
+        "operationId": "Employment Status",
+        "summary": "",
+        "description": "This API is used to get employment status. You can add limit, paging parameters to filter the response.",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FilterCompanyDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Teomemploymentstatus"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request, invalid parameters or JSON body"
+          },
+          "401": {
+            "description": "Unauthorized, invalid Access Token"
+          },
+          "429": {
+            "description": "Too many requests"
+          }
+        },
+        "tags": [
+          "Company"
+        ]
+      }
+    },
+    "/company/orglevel": {
+      "post": {
+        "operationId": "Organization Level",
+        "summary": "",
+        "description": "This API is used to get organization level. You can add limit, paging parameters to filter the response.",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FilterCompanyDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Teomorglevel"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request, invalid parameters or JSON body"
+          },
+          "401": {
+            "description": "Unauthorized, invalid Access Token"
+          },
+          "429": {
+            "description": "Too many requests"
+          }
+        },
+        "tags": [
+          "Company"
+        ]
+      }
+    },
+    "/company/banklist": {
+      "post": {
+        "operationId": "Bank List",
+        "summary": "",
+        "description": "This API is used to get bank list. You can add limit, paging parameters to filter the response.",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FilterCompanyDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Tpymbank"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request, invalid parameters or JSON body"
+          },
+          "401": {
+            "description": "Unauthorized, invalid Access Token"
+          },
+          "429": {
+            "description": "Too many requests"
+          }
+        },
+        "tags": [
+          "Company"
+        ]
+      }
+    },
+    "/company/leavetype": {
+      "post": {
+        "operationId": "Leave Type",
+        "summary": "",
+        "description": "This API is used to get leave type. You can add limit, paging parameters to filter the response.",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FilterCompanyDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Ttamleavetype"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request, invalid parameters or JSON body"
+          },
+          "401": {
+            "description": "Unauthorized, invalid Access Token"
+          },
+          "429": {
+            "description": "Too many requests"
+          }
+        },
+        "tags": [
+          "Company"
+        ]
+      }
+    },
+    "/company/jobgrade": {
+      "post": {
+        "operationId": "Job Grade",
+        "summary": "",
+        "description": "This API is used to get job grade list. You can add limit, paging parameters to filter the response.",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FilterCompanyDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Teomjobgrade"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request, invalid parameters or JSON body"
+          },
+          "401": {
+            "description": "Unauthorized, invalid Access Token"
+          },
+          "429": {
+            "description": "Too many requests"
+          }
+        },
+        "tags": [
+          "Company"
+        ]
+      }
+    },
+    "/company/jobstatus": {
+      "post": {
+        "operationId": "Job Status",
+        "summary": "",
+        "description": "This API is used to get job status list. You can add limit, paging parameters to filter the response.",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FilterCompanyDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Teomjobstatus"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request, invalid parameters or JSON body"
+          },
+          "401": {
+            "description": "Unauthorized, invalid Access Token"
+          },
+          "429": {
+            "description": "Too many requests"
+          }
+        },
+        "tags": [
+          "Company"
+        ]
+      }
+    },
+    "/company/resigntype": {
+      "post": {
+        "operationId": "Resign Type",
+        "summary": "",
+        "description": "This API is used to get resign type list. You can add limit, paging parameters to filter the response.",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FilterCompanyDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Tcamresigntype"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request, invalid parameters or JSON body"
+          },
+          "401": {
+            "description": "Unauthorized, invalid Access Token"
+          },
+          "429": {
+            "description": "Too many requests"
+          }
+        },
+        "tags": [
+          "Company"
+        ]
+      }
+    },
+    "/company/resignreason": {
+      "post": {
+        "operationId": "Resign Reason",
+        "summary": "",
+        "description": "This API is used to get resign reason list. You can add limit, paging parameters to filter the response.",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FilterCompanyDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Tcamresignreason"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request, invalid parameters or JSON body"
+          },
+          "401": {
+            "description": "Unauthorized, invalid Access Token"
+          },
+          "429": {
+            "description": "Too many requests"
+          }
+        },
+        "tags": [
+          "Company"
+        ]
+      }
+    },
+    "/company/position": {
+      "post": {
+        "operationId": "Position",
+        "summary": "",
+        "description": "This API is used to get position list. You can add limit, paging parameters to filter the response.",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FilterPositionDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Teomposition"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request, invalid parameters or JSON body"
+          },
+          "401": {
+            "description": "Unauthorized, invalid Access Token"
+          },
+          "429": {
+            "description": "Too many requests"
+          }
+        },
+        "tags": [
+          "Company"
+        ]
+      }
+    },
+    "/company/timezone": {
+      "post": {
+        "operationId": "Timezone",
+        "summary": "",
+        "description": "This API is used to get timezone list. You can add limit, paging parameters to filter the response.",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FilterCompanyDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Tsfmtimezone"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request, invalid parameters or JSON body"
+          },
+          "401": {
+            "description": "Unauthorized, invalid Access Token"
+          },
+          "429": {
+            "description": "Too many requests"
+          }
+        },
+        "tags": [
+          "Company"
+        ]
+      }
+    },
+    "/company/reqstatus": {
+      "post": {
+        "operationId": "Request Status",
+        "summary": "",
+        "description": "This API is used to request status list. You can add limit, paging parameters to filter the response.",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FilterCompanyDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Tgemreqstatus"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request, invalid parameters or JSON body"
+          },
+          "401": {
+            "description": "Unauthorized, invalid Access Token"
+          },
+          "429": {
+            "description": "Too many requests"
+          }
+        },
+        "tags": [
+          "Company"
+        ]
+      }
+    },
+    "/company/nationality": {
+      "post": {
+        "operationId": "Nationality",
+        "summary": "",
+        "description": "This API is used to get all nationality detail list. You can add limit, paging, or query parameters to filter the response.",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FilterCompanyWithQueryDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Teomnationality"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request, invalid parameters or JSON body"
+          },
+          "401": {
+            "description": "Unauthorized, invalid Access Token"
+          },
+          "429": {
+            "description": "Too many requests"
+          }
+        },
+        "tags": [
+          "Company"
+        ]
+      }
+    },
+    "/company/costcenter": {
+      "post": {
+        "operationId": "Cost Center",
+        "summary": "",
+        "description": "This API is used to get all cost center detail list. You can add limit, paging, company id, status, depth, flag, parent code, parent path, or query parameters to filter the response.",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FilterCostCenterDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Teomcostcenter"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request, invalid parameters or JSON body"
+          },
+          "401": {
+            "description": "Unauthorized, invalid Access Token"
+          },
+          "429": {
+            "description": "Too many requests"
+          }
+        },
+        "tags": [
+          "Company"
+        ]
+      }
+    },
+    "/company/worklocation": {
+      "post": {
+        "operationId": "Work Location",
+        "summary": "",
+        "description": "This API is used to get all work location detail list. You can add limit, paging, company id, parent id, country id, state id, city id, work location type, max radius, or query parameters to filter the response.",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FilterWorklocationDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Teomworklocation"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request, invalid parameters or JSON body"
+          },
+          "401": {
+            "description": "Unauthorized, invalid Access Token"
+          },
+          "429": {
+            "description": "Too many requests"
+          }
+        },
+        "tags": [
+          "Company"
+        ]
+      }
+    },
+    "/company/religion": {
+      "post": {
+        "operationId": "Religion",
+        "summary": "",
+        "description": "This API is used to get all religion detail list. You can add limit, paging, or query parameters to filter the response.",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FilterCompanyWithQueryDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Teomreligion"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request, invalid parameters or JSON body"
+          },
+          "401": {
+            "description": "Unauthorized, invalid Access Token"
+          },
+          "429": {
+            "description": "Too many requests"
+          }
+        },
+        "tags": [
+          "Company"
+        ]
+      }
+    },
+    "/company/company": {
+      "post": {
+        "operationId": "Company",
+        "summary": "",
+        "description": "This API is used to get all company list. You can add limit, paging, or query parameters to filter the response.",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FilterCompanyDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Teomcompany"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request, invalid parameters or JSON body"
+          },
+          "401": {
+            "description": "Unauthorized, invalid Access Token"
+          },
+          "429": {
+            "description": "Too many requests"
+          }
+        },
+        "tags": [
+          "Company"
+        ]
+      }
+    },
+    "/claim": {
+      "post": {
+        "operationId": "Get Claim List",
+        "summary": "",
+        "description": "This API is used to get all employee claim list. You can add limit, paging, employee ID, employee number, to filter the response.",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FilterClaimDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ClaimDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request, invalid parameters or JSON body"
+          },
+          "401": {
+            "description": "Unauthorized, invalid Access Token"
+          },
+          "429": {
+            "description": "Too many requests"
+          }
+        },
+        "tags": [
+          "Claim"
+        ]
+      }
+    },
+    "/leave": {
+      "post": {
+        "operationId": "Get Leave",
+        "summary": "",
+        "description": "This API is used to get all employee leave list. You can add limit, paging, employee ID, employee number, or query parameters to filter the response.",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FilterLeaveDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ViewLeaveNewReport"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request, invalid parameters or JSON body"
+          },
+          "401": {
+            "description": "Unauthorized, invalid Access Token"
+          },
+          "429": {
+            "description": "Too many requests"
+          }
+        },
+        "tags": [
+          "Leave"
+        ]
+      }
+    },
+    "/leave/add": {
+      "post": {
+        "operationId": "Leave Request",
+        "summary": "",
+        "description": "This API is used to submit leave request.",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/leaveRequestValidator"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad request, invalid parameters or JSON body"
+          },
+          "401": {
+            "description": "Unauthorized, invalid Access Token"
+          },
+          "429": {
+            "description": "Too many requests"
+          }
+        },
+        "tags": [
+          "Leave"
+        ]
+      }
+    },
+    "/leave/leaveBalance": {
+      "post": {
+        "operationId": "Get Leave Balance",
+        "summary": "",
+        "description": "This API is used to Get leave balance for employee.",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/getLeaveBalanceDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ViewLeaveNewReport"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request, invalid parameters or JSON body"
+          },
+          "401": {
+            "description": "Unauthorized, invalid Access Token"
+          },
+          "429": {
+            "description": "Too many requests"
+          }
+        },
+        "tags": [
+          "Leave"
+        ]
+      }
+    },
+    "/leave/type": {
+      "get": {
+        "operationId": "Get Leave Type",
+        "summary": "",
+        "description": "This API is used to get leave type.",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/leaveTypeDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request, invalid parameters or JSON body"
+          },
+          "401": {
+            "description": "Unauthorized, invalid Access Token"
+          },
+          "429": {
+            "description": "Too many requests"
+          }
+        },
+        "tags": [
+          "Leave"
+        ]
+      }
+    },
+    "/login/validation": {
+      "post": {
+        "operationId": "User Login Validation",
+        "summary": "",
+        "description": "This API is used to validate user credentials in Greatday HR, encrypt your password using: \u003Cbr\u003E AES-128-CBC HEX \u003Cbr\u003E SALT = saltforgdopenapi \u003Cbr\u003E IV = keysforgdopenapi",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserLoginDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserLoginResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request, invalid parameters or JSON body"
+          },
+          "401": {
+            "description": "Unauthorized, invalid Access Token"
+          },
+          "429": {
+            "description": "Too many requests"
+          }
+        },
+        "tags": [
+          "Login Validation"
+        ]
+      }
+    },
+    "/overtime": {
+      "post": {
+        "operationId": "Get Overtime Report",
+        "summary": "",
+        "description": "This API is used to get all employee overtime list. You can add limit, paging, employee ID, employee number, or query parameters to filter the response.",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FilterOvertimeDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ViewOvertimeReport"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request, invalid parameters or JSON body"
+          },
+          "401": {
+            "description": "Unauthorized, invalid Access Token"
+          },
+          "429": {
+            "description": "Too many requests"
+          }
+        },
+        "tags": [
+          "Overtime"
+        ]
+      }
+    },
+    "/overtime/add": {
+      "post": {
+        "operationId": "Overtime Request",
+        "summary": "",
+        "description": "This API is used to overtime for employee.",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/OvertimeRequestValidator"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ViewOvertimeReport"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request, invalid parameters or JSON body"
+          },
+          "401": {
+            "description": "Unauthorized, invalid Access Token"
+          },
+          "429": {
+            "description": "Too many requests"
+          }
+        },
+        "tags": [
+          "Overtime"
+        ]
+      }
+    },
+    "/activity": {
+      "post": {
+        "operationId": "Get Activity Report",
+        "summary": "",
+        "description": "This API is used to get activity. You can add limit, paging, employee ID, employee number parameters to filter the response.",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FilterActivityDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Tgospactivity"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request, invalid parameters or JSON body"
+          },
+          "401": {
+            "description": "Unauthorized, invalid Access Token"
+          },
+          "429": {
+            "description": "Too many requests"
+          }
+        },
+        "tags": [
+          "Activity Report"
+        ]
+      }
+    },
+    "/tracker/all": {
+      "post": {
+        "operationId": "Get Tracker Report",
+        "summary": "",
+        "description": "This API is used to get tracker reoprt. You can add limit, paging, employee ID, employee number parameters to filter the response.",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TrackerReportValidator"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TrackerReportDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request, invalid parameters or JSON body"
+          },
+          "401": {
+            "description": "Unauthorized, invalid Access Token"
+          },
+          "429": {
+            "description": "Too many requests"
+          }
+        },
+        "tags": [
+          "Tracker Report"
+        ]
+      }
+    },
+    "/tracker/detail": {
+      "post": {
+        "operationId": "Get Tracker Detail",
+        "summary": "",
+        "description": "This API is used to get tracker detail. You can add limit, paging, employee ID, employee number parameters to filter the response.",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TrackerDetailValidator"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TrackerDetailDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request, invalid parameters or JSON body"
+          },
+          "401": {
+            "description": "Unauthorized, invalid Access Token"
+          },
+          "429": {
+            "description": "Too many requests"
+          }
+        },
+        "tags": [
+          "Tracker Report"
+        ]
+      }
+    },
+    "/auth/login": {
+      "post": {
+        "operationId": "Login",
+        "summary": "",
+        "description": "Greatday API uses access token generated from user ID and user secret for authentication. To get the user ID and user secret, please ask our team. All API calls need the access token to authorize users. Access tokens are expiring in 24 hours by default and can be generated using refresh token.",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TokenDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request, invalid parameters or JSON body"
+          },
+          "429": {
+            "description": "Too many requests"
+          }
+        },
+        "tags": [
+          "Authentication"
+        ]
+      }
+    },
+    "/auth/refresh": {
+      "post": {
+        "operationId": "Refresh Token",
+        "summary": "",
+        "description": "Refresh token is used to generate new access token once the access token was expired. The refresh token expired in 1 week.",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RefreshDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TokenDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request, invalid parameters or JSON body"
+          },
+          "429": {
+            "description": "Too many requests"
+          }
+        },
+        "tags": [
+          "Authentication"
+        ]
+      }
+    },
+    "/auth/register": {
+      "post": {
+        "operationId": "AuthController_register",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/error-log": {
+      "get": {
+        "operationId": "ErrorLogController_getLog",
+        "parameters": [
+          {
+            "name": "log",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    }
+  },
+  "info": {
+    "title": "Greatday API",
+    "description": "Enables other services to be integrated with Greatday HR",
+    "version": "1.0.0",
+    "contact": {
+
+    },
+    "x-logo": {
+      "url": "https://app.greatdayhr.com/assets/images/logo/greatday.svg",
+      "backgroundColor": "#FFEDE0",
+      "altText": "Greatday HR"
+    }
+  },
+  "tags": [],
+  "servers": [
+    {
+      "url": "/api"
+    }
+  ],
+  "components": {
+    "schemas": {
+      "FilterEmployeeDto": {
+        "type": "object",
+        "properties": {
+          "page": {
+            "type": "number",
+            "description": "Page Number"
+          },
+          "limit": {
+            "type": "number",
+            "description": "Limit the number of data each page (Max. 100)"
+          },
+          "query": {
+            "type": "string",
+            "description": "Query (Optional)"
+          },
+          "empId": {
+            "type": "string",
+            "description": "Employee ID (Optional)"
+          },
+          "empNo": {
+            "type": "string",
+            "description": "Employee Number (Optional)"
+          },
+          "companyId": {
+            "type": "string",
+            "description": "Company ID (Optional)"
+          },
+          "orgUnit": {
+            "type": "string",
+            "description": "Organization Unit (Optional)"
+          },
+          "empStatus": {
+            "type": "string",
+            "description": "Only Show Active or Inactive Employee (Optional). Value: `active`, `inactive`, `all`. By default will return all employee"
+          }
+        }
+      },
+      "ResponseEmployee": {
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "number"
+          },
+          "firstName": {
+            "type": "string"
+          },
+          "middleName": {
+            "type": "string"
+          },
+          "lastName": {
+            "type": "string"
+          },
+          "userName": {
+            "type": "string"
+          },
+          "companyName": {
+            "type": "string"
+          },
+          "fullName": {
+            "type": "string"
+          },
+          "empId": {
+            "type": "string"
+          },
+          "empNo": {
+            "type": "string"
+          },
+          "positionId": {
+            "type": "number"
+          },
+          "posCode": {
+            "type": "string"
+          },
+          "posNameEn": {
+            "type": "string"
+          },
+          "employmentStatusCode": {
+            "type": "string"
+          },
+          "employmentStatus": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "companyId": {
+            "type": "string"
+          },
+          "spvParent": {
+            "type": "string"
+          },
+          "spvPath": {
+            "type": "string"
+          },
+          "startDate": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "endDate": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "photo": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string"
+          },
+          "jobStatus": {
+            "type": "string"
+          },
+          "emailVerified": {
+            "type": "string"
+          },
+          "worklocationCode": {
+            "type": "string"
+          },
+          "worklocationName": {
+            "type": "string"
+          },
+          "costCode": {
+            "type": "string"
+          },
+          "costcenterName": {
+            "type": "string"
+          },
+          "deptCode": {
+            "type": "string"
+          },
+          "deptNameEn": {
+            "type": "string"
+          },
+          "orgUnit": {
+            "type": "string"
+          },
+          "employmentStartDate": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "employmentEndDate": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "customfield1": {
+            "type": "string"
+          },
+          "customfield2": {
+            "type": "string"
+          },
+          "customfield3": {
+            "type": "string"
+          },
+          "customfield4": {
+            "type": "string"
+          },
+          "customfield5": {
+            "type": "string"
+          },
+          "customfield6": {
+            "type": "string"
+          },
+          "customfield7": {
+            "type": "string"
+          },
+          "customfield8": {
+            "type": "string"
+          },
+          "customfield9": {
+            "type": "string"
+          },
+          "customfield10": {
+            "type": "string"
+          }
+        }
+      },
+      "ViewGoEmp": {
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "number"
+          },
+          "firstName": {
+            "type": "string"
+          },
+          "lastName": {
+            "type": "string"
+          },
+          "userName": {
+            "type": "string"
+          },
+          "middleName": {
+            "type": "string"
+          },
+          "fullName": {
+            "type": "string"
+          },
+          "empId": {
+            "type": "string"
+          },
+          "empNo": {
+            "type": "string"
+          },
+          "positionId": {
+            "type": "number"
+          },
+          "email": {
+            "type": "string"
+          },
+          "posCode": {
+            "type": "string"
+          },
+          "posNameEn": {
+            "type": "string"
+          },
+          "companyId": {
+            "type": "number"
+          },
+          "spvParent": {
+            "type": "string"
+          },
+          "spvPath": {
+            "type": "string"
+          },
+          "startDate": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "endDate": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "photo": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string"
+          },
+          "emailVerified": {
+            "type": "string"
+          },
+          "workLocationCode": {
+            "type": "string"
+          },
+          "worklocationName": {
+            "type": "string"
+          },
+          "costCode": {
+            "type": "string"
+          },
+          "costcenterName": {
+            "type": "string"
+          }
+        }
+      },
+      "ParamsEmployeeDto": {
+        "type": "object",
+        "properties": {
+          "employeeNo": {
+            "type": "string",
+            "description": "Employee Number"
+          },
+          "companyId": {
+            "type": "number",
+            "description": "Company ID"
+          },
+          "userName": {
+            "type": "string",
+            "description": "Username for Login"
+          },
+          "email": {
+            "type": "string",
+            "description": "E-mail"
+          },
+          "employeeNameFirst": {
+            "type": "string",
+            "description": "Employee First Name"
+          },
+          "employeeNameMiddle": {
+            "type": "string",
+            "description": "Employee Middle Name"
+          },
+          "employeeNameLast": {
+            "type": "string",
+            "description": "Employee Last Name"
+          },
+          "nationality": {
+            "type": "string",
+            "description": "Nationality, using Nationality Code"
+          },
+          "position": {
+            "type": "string",
+            "description": "Position Code"
+          },
+          "orgUnit": {
+            "type": "string",
+            "description": "Organzation Unit Code"
+          },
+          "jobStatus": {
+            "type": "string",
+            "description": "Job Status Code"
+          },
+          "joinDate": {
+            "type": "string",
+            "description": "Join Date (ex: 2019-01-01)"
+          },
+          "gender": {
+            "type": "number",
+            "description": "Gender, 1 = Male; 0 = Female"
+          },
+          "birthDay": {
+            "type": "string",
+            "description": "Birth Date (ex: 2019-01-01)"
+          },
+          "grade": {
+            "type": "string",
+            "description": "Grade, using grade Code"
+          },
+          "costCenter": {
+            "type": "string",
+            "description": "Cost Center, using Cost Center Code"
+          },
+          "status": {
+            "type": "string",
+            "description": "Employment Status, using Employment Status Code"
+          },
+          "workLocation": {
+            "type": "string",
+            "description": "Work Location, using Work Location Code"
+          },
+          "birthPlace": {
+            "type": "string",
+            "description": "Birth Place"
+          },
+          "religion": {
+            "type": "string",
+            "description": "Religion, using Religion Code"
+          },
+          "maritalStatus": {
+            "type": "string",
+            "description": "Marital Status, 0 = Single, 1 = Married, 2 = Widow, 3 = Widower"
+          },
+          "address": {
+            "type": "string",
+            "description": "Address"
+          },
+          "timezoneId": {
+            "type": "number",
+            "description": "Timezone ID, see timezone master data"
+          },
+          "mobilePhone": {
+            "type": "string",
+            "description": "Phone number"
+          },
+          "supervisor": {
+            "type": "string",
+            "description": "Supervisor Employee number"
+          },
+          "manager": {
+            "type": "string",
+            "description": "Manager Employee number"
+          },
+          "shiftPattern": {
+            "type": "string",
+            "description": "Shift Pattern Code"
+          },
+          "employmentEndDate": {
+            "type": "string",
+            "description": "Employment End Date"
+          },
+          "customField1": {
+            "type": "string",
+            "description": "Custom Field 1"
+          },
+          "customField2": {
+            "type": "string",
+            "description": "Custom Field 2"
+          },
+          "customField3": {
+            "type": "string",
+            "description": "Custom Field 3"
+          },
+          "customField4": {
+            "type": "string",
+            "description": "Custom Field 4"
+          },
+          "customField5": {
+            "type": "string",
+            "description": "Custom Field 5"
+          },
+          "customField6": {
+            "type": "string",
+            "description": "Custom Field 6"
+          },
+          "customField7": {
+            "type": "string",
+            "description": "Custom Field 7"
+          },
+          "customField8": {
+            "type": "string",
+            "description": "Custom Field 8"
+          },
+          "customField9": {
+            "type": "string",
+            "description": "Custom Field 9"
+          },
+          "customField10": {
+            "type": "string",
+            "description": "Custom Field 10"
+          },
+          "allowCreateNewMaster": {
+            "type": "string",
+            "description": "Greatday will automatically added new master if master data not found in Greatday"
+          }
+        },
+        "required": [
+          "employeeNo",
+          "companyId",
+          "userName",
+          "email",
+          "employeeNameFirst",
+          "nationality",
+          "position",
+          "joinDate",
+          "gender",
+          "birthDay",
+          "grade",
+          "costCenter",
+          "status",
+          "workLocation",
+          "birthPlace",
+          "religion",
+          "maritalStatus",
+          "address",
+          "timezoneId",
+          "mobilePhone",
+          "supervisor",
+          "manager",
+          "shiftPattern"
+        ]
+      },
+      "ResponseAddUpdate": {
+        "type": "object",
+        "properties": {
+          "empNo": {
+            "type": "string"
+          },
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string"
+          }
+        }
+      },
+      "UpdateEmployeeGDE": {
+        "type": "object",
+        "properties": {
+          "transactionType": {
+            "type": "string",
+            "description": "Transaction Type: `MUTATION`, `REHIRE`, `EMPSTATUSCHANGE`, `TERMINATION`, `ENTITYTRANSFER`, `PROMOTION`, `DEMOTION`, `PERSONALUPDATE`"
+          },
+          "transactionEffectiveDate": {
+            "type": "string",
+            "description": "Effective Date of the updated data, required for any kind of Transaction Type except Personal Update"
+          },
+          "companyId": {
+            "type": "number",
+            "description": "Company ID, see Master Company"
+          },
+          "empNo": {
+            "type": "string",
+            "description": "Updated Employee Number"
+          },
+          "employeeName": {
+            "type": "string",
+            "description": "Employee Name"
+          },
+          "username": {
+            "type": "string",
+            "description": "User Name"
+          },
+          "orgUnit": {
+            "type": "string",
+            "description": "Organization Unit"
+          },
+          "position": {
+            "type": "string",
+            "description": "Position Code or Name"
+          },
+          "workLocation": {
+            "type": "string",
+            "description": "Work Location Code or Name"
+          },
+          "costCenter": {
+            "type": "string",
+            "description": "Cost Center Code or Name"
+          },
+          "status": {
+            "type": "string",
+            "description": "Employment Status"
+          },
+          "employmentStartDate": {
+            "type": "string",
+            "description": "Employment Start Date"
+          },
+          "employmentEndDate": {
+            "type": "string",
+            "description": "Employment End Date"
+          },
+          "permanentDate": {
+            "type": "string",
+            "description": "Permanent Date"
+          },
+          "grade": {
+            "type": "string",
+            "description": "Grade Code or Name"
+          },
+          "jobStatus": {
+            "type": "string",
+            "description": "Job Status Code or Name"
+          },
+          "supervisor": {
+            "type": "string",
+            "description": "Supervisor Employee Number"
+          },
+          "manager": {
+            "type": "string",
+            "description": "Manager Employee Number"
+          },
+          "resignReason": {
+            "type": "string",
+            "description": "Resign Reason Code"
+          },
+          "resignType": {
+            "type": "string",
+            "description": "Resign Type Code"
+          },
+          "initialJoinDate": {
+            "type": "string",
+            "description": "Join date of the employee, if there`s any change"
+          },
+          "email": {
+            "type": "string",
+            "description": "Employee`s Email"
+          },
+          "firstName": {
+            "type": "string",
+            "description": "Employee`s first name"
+          },
+          "middleName": {
+            "type": "string",
+            "description": "Employee`s middle name"
+          },
+          "lastName": {
+            "type": "string",
+            "description": "Employee`s last name"
+          },
+          "initialName": {
+            "type": "string",
+            "description": "Employee`s initial name"
+          },
+          "nationality": {
+            "type": "string",
+            "description": "Nationality Code"
+          },
+          "timezoneId": {
+            "type": "string",
+            "description": "Time Zone ID"
+          },
+          "birthDay": {
+            "type": "string",
+            "description": "Employee`s birth date"
+          },
+          "birthPlace": {
+            "type": "string",
+            "description": "Employee`s birth place"
+          },
+          "address": {
+            "type": "string",
+            "description": "Employee`s address"
+          },
+          "city": {
+            "type": "string",
+            "description": "Employee`s city"
+          },
+          "state": {
+            "type": "string",
+            "description": "Employee`s state"
+          },
+          "country": {
+            "type": "string",
+            "description": "Employee`s country"
+          },
+          "zipCode": {
+            "type": "string",
+            "description": "Employee`s zip code"
+          },
+          "mobilePhone": {
+            "type": "string",
+            "description": "Employee`s mobile phone number"
+          },
+          "gender": {
+            "type": "string",
+            "description": "Employee`s gender"
+          },
+          "idCardNumber": {
+            "type": "string",
+            "description": "Employee`s ID Card Number"
+          },
+          "maritalStatus": {
+            "type": "string",
+            "description": "Employee`s Marital Status ID"
+          },
+          "religion": {
+            "type": "string",
+            "description": "Employee`s Religion Code or Name"
+          },
+          "customField1": {
+            "type": "string",
+            "description": "Custom Field 1"
+          },
+          "customField2": {
+            "type": "string",
+            "description": "Custom Field 2"
+          },
+          "customField3": {
+            "type": "string",
+            "description": "Custom Field 3"
+          },
+          "customField4": {
+            "type": "string",
+            "description": "Custom Field 4"
+          },
+          "customField5": {
+            "type": "string",
+            "description": "Custom Field 5"
+          },
+          "customField6": {
+            "type": "string",
+            "description": "Custom Field 6"
+          },
+          "customField7": {
+            "type": "string",
+            "description": "Custom Field 7"
+          },
+          "customField8": {
+            "type": "string",
+            "description": "Custom Field 8"
+          },
+          "customField9": {
+            "type": "string",
+            "description": "Custom Field 9"
+          },
+          "customField10": {
+            "type": "string",
+            "description": "Custom Field 10"
+          },
+          "allowCreateNewMaster": {
+            "type": "string",
+            "description": "Greatday will automatically added new master if master data not found in Greatday"
+          }
+        },
+        "required": [
+          "transactionType",
+          "transactionEffectiveDate",
+          "empNo"
+        ]
+      },
+      "UpdateEmpPayload": {
+        "type": "object",
+        "properties": {
+
+        }
+      },
+      "FilterAttendanceDto": {
+        "type": "object",
+        "properties": {
+          "page": {
+            "type": "number",
+            "description": "Page Number"
+          },
+          "limit": {
+            "type": "number",
+            "description": "Limit the number of data each page (Max. 100)"
+          },
+          "empNo": {
+            "type": "string",
+            "description": "Employee Number (Optional)"
+          },
+          "empId": {
+            "type": "string",
+            "description": "Employee ID (Optional)"
+          },
+          "orgUnit": {
+            "type": "string",
+            "description": "Organization Unit (Optional)"
+          }
+        }
+      },
+      "Ttadattendance": {
+        "type": "object",
+        "properties": {
+          "empNo": {
+            "type": "string"
+          },
+          "attendId": {
+            "type": "string"
+          },
+          "empId": {
+            "type": "string"
+          },
+          "shiftdailyCode": {
+            "type": "string"
+          },
+          "companyId": {
+            "type": "number"
+          },
+          "shiftstarttime": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "shiftendtime": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "attendCode": {
+            "type": "string"
+          },
+          "starttime": {
+            "type": "string"
+          },
+          "endtime": {
+            "type": "string"
+          },
+          "actualIn": {
+            "type": "number"
+          },
+          "actualOut": {
+            "type": "number"
+          },
+          "daytype": {
+            "type": "string"
+          },
+          "ipStarttime": {
+            "type": "string"
+          },
+          "ipEndtime": {
+            "type": "string"
+          },
+          "remark": {
+            "type": "string"
+          },
+          "defaultShift": {
+            "type": "string"
+          },
+          "totalOt": {
+            "type": "number"
+          },
+          "totalOtindex": {
+            "type": "number"
+          },
+          "overtimeCode": {
+            "type": "string"
+          },
+          "flexibleshift": {
+            "type": "string"
+          },
+          "autoOvt": {
+            "type": "number"
+          },
+          "actualworkmnt": {
+            "type": "number"
+          },
+          "actualLti": {
+            "type": "number"
+          },
+          "actualEao": {
+            "type": "number"
+          },
+          "geolocation": {
+            "type": "string"
+          },
+          "geolocStart": {
+            "type": "string"
+          },
+          "geolocEnd": {
+            "type": "string"
+          },
+          "photoStart": {
+            "type": "string"
+          },
+          "photoEnd": {
+            "type": "string"
+          },
+          "createdDate": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "createdBy": {
+            "type": "string"
+          },
+          "modifiedDate": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "modifiedBy": {
+            "type": "string"
+          }
+        }
+      },
+      "AttendanceRecordtimeValidator": {
+        "type": "object",
+        "properties": {
+          "time": {
+            "format": "date-time",
+            "type": "string",
+            "description": "Time"
+          },
+          "empId": {
+            "type": "string",
+            "description": "Empolyee Id"
+          },
+          "empNo": {
+            "type": "string",
+            "description": "Empolyee Number"
+          }
+        }
+      },
+      "AttendanceByPeriod": {
+        "type": "object",
+        "properties": {
+          "empNo": {
+            "type": "string"
+          },
+          "attendId": {
+            "type": "string"
+          },
+          "empId": {
+            "type": "string"
+          },
+          "SpvNo": {
+            "type": "string"
+          },
+          "SpvId": {
+            "type": "string"
+          },
+          "shiftdailyCode": {
+            "type": "string"
+          },
+          "companyId": {
+            "type": "number"
+          },
+          "shiftstarttime": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "shiftendtime": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "attendCode": {
+            "type": "string"
+          },
+          "starttime": {
+            "type": "string"
+          },
+          "endtime": {
+            "type": "string"
+          },
+          "actualIn": {
+            "type": "number"
+          },
+          "actualOut": {
+            "type": "number"
+          },
+          "daytype": {
+            "type": "string"
+          },
+          "ipStarttime": {
+            "type": "string"
+          },
+          "ipEndtime": {
+            "type": "string"
+          },
+          "remark": {
+            "type": "string"
+          },
+          "defaultShift": {
+            "type": "string"
+          },
+          "totalOt": {
+            "type": "number"
+          },
+          "totalOtindex": {
+            "type": "number"
+          },
+          "overtimeCode": {
+            "type": "string"
+          },
+          "flexibleshift": {
+            "type": "string"
+          },
+          "autoOvt": {
+            "type": "number"
+          },
+          "actualworkmnt": {
+            "type": "number"
+          },
+          "actualLti": {
+            "type": "number"
+          },
+          "actualEao": {
+            "type": "number"
+          },
+          "geolocation": {
+            "type": "string"
+          },
+          "geolocStart": {
+            "type": "string"
+          },
+          "geolocEnd": {
+            "type": "string"
+          },
+          "photoStart": {
+            "type": "string"
+          },
+          "photoEnd": {
+            "type": "string"
+          }
+        }
+      },
+      "AttendanceStatus": {
+        "type": "object",
+        "properties": {
+          "periodStart": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "periodEnd": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "empNo": {
+            "type": "string"
+          },
+          "empFirstName": {
+            "type": "string"
+          },
+          "empMiddleName": {
+            "type": "string"
+          },
+          "empLastName": {
+            "type": "string"
+          },
+          "birthDate": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "positionName": {
+            "type": "string"
+          },
+          "department": {
+            "type": "string"
+          },
+          "empStartDate": {
+            "type": "string"
+          },
+          "empEndDate": {
+            "type": "string"
+          },
+          "costCode": {
+            "type": "string"
+          },
+          "spvName": {
+            "type": "string"
+          },
+          "empStatus": {
+            "type": "string"
+          },
+          "contractedWorkHours": {
+            "type": "string"
+          },
+          "gender": {
+            "type": "string"
+          },
+          "attendanceStatus": {
+            "type": "string"
+          }
+        }
+      },
+      "MasterAttendanceStatus": {
+        "type": "object",
+        "properties": {
+          "attendCode": {
+            "type": "string"
+          },
+          "attendNameEn": {
+            "type": "string"
+          },
+          "attendNameId": {
+            "type": "string"
+          },
+          "attendNameMy": {
+            "type": "string"
+          },
+          "attendNameTh": {
+            "type": "string"
+          },
+          "presentFlag": {
+            "type": "string"
+          }
+        }
+      },
+      "ShiftDailyDto": {
+        "type": "object",
+        "properties": {
+          "page": {
+            "type": "number",
+            "description": "Page Number"
+          },
+          "limit": {
+            "type": "number",
+            "description": "Limit the number of data each page (Max. 100)"
+          },
+          "query": {
+            "type": "string",
+            "description": "Query (Optional)"
+          }
+        }
+      },
+      "Ttamshiftdaily": {
+        "type": "object",
+        "properties": {
+          "shiftdailycode": {
+            "type": "string"
+          },
+          "companyId": {
+            "type": "number"
+          },
+          "starttime": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "endtime": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "productivehours": {
+            "type": "number"
+          },
+          "daytype": {
+            "type": "string"
+          },
+          "flexibleshift": {
+            "type": "string"
+          },
+          "graceforlate": {
+            "type": "number"
+          },
+          "graceEai": {
+            "type": "number"
+          },
+          "graceLti": {
+            "type": "number"
+          },
+          "graceEao": {
+            "type": "number"
+          },
+          "graceLto": {
+            "type": "number"
+          },
+          "gracebreakEai": {
+            "type": "number"
+          },
+          "gracebreakLti": {
+            "type": "number"
+          },
+          "gracebreakEao": {
+            "type": "number"
+          },
+          "gracebreakLto": {
+            "type": "number"
+          },
+          "overtimecode": {
+            "type": "string"
+          },
+          "overtimecodePh": {
+            "type": "string"
+          },
+          "automaticovtType": {
+            "type": "string"
+          },
+          "automaticovtStart": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "automaticovtEnd": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "autoovtminutes": {
+            "type": "number"
+          },
+          "ovtBeforeend": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "ovtAfterstart": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "remark": {
+            "type": "string"
+          },
+          "breakovtCalculation": {
+            "type": "string"
+          },
+          "shiftdailycodeph": {
+            "type": "string"
+          },
+          "ovtAfterstartMnt": {
+            "type": "number"
+          },
+          "overtimecodeSd": {
+            "type": "string"
+          },
+          "overtimecodeRestd": {
+            "type": "string"
+          },
+          "overtimecodePhrestd": {
+            "type": "string"
+          },
+          "overtimecodeSdrestd": {
+            "type": "string"
+          },
+          "overtimecodeInside": {
+            "type": "string"
+          },
+          "color": {
+            "type": "string"
+          },
+          "createdDate": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "createdBy": {
+            "type": "string"
+          },
+          "modifiedDate": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "modifiedBy": {
+            "type": "string"
+          },
+          "ignoreattlocdetect": {
+            "type": "string"
+          },
+          "isActive": {
+            "type": "number"
+          },
+          "startlimit": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "endlimit": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "ttadshiftbreaks": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "ShiftPatternDto": {
+        "type": "object",
+        "properties": {
+          "page": {
+            "type": "number",
+            "description": "Page Number"
+          },
+          "limit": {
+            "type": "number",
+            "description": "Limit the number of data each page (Max. 100)"
+          },
+          "query": {
+            "type": "string",
+            "description": "Query (Optional)"
+          }
+        }
+      },
+      "Ttamshiftgroup": {
+        "type": "object",
+        "properties": {
+          "shiftgroupcode": {
+            "type": "string"
+          },
+          "companyId": {
+            "type": "number"
+          },
+          "shiftgroupname": {
+            "type": "string"
+          },
+          "totaldays": {
+            "type": "number"
+          },
+          "phOffday": {
+            "type": "string"
+          },
+          "createdDate": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "createdBy": {
+            "type": "string"
+          },
+          "modifiedDate": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "modifiedBy": {
+            "type": "string"
+          },
+          "overtimeCalculation": {
+            "type": "string"
+          },
+          "ovtProdhour": {
+            "type": "string"
+          },
+          "ttarshiftgroupdailys": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "FilterCompanyDto": {
+        "type": "object",
+        "properties": {
+          "page": {
+            "type": "number",
+            "description": "Page Number"
+          },
+          "limit": {
+            "type": "number",
+            "description": "Limit the number of data each page (Max. 100)"
+          }
+        }
+      },
+      "Teomemploymentstatus": {
+        "type": "object",
+        "properties": {
+          "employmentstatusCode": {
+            "type": "string"
+          },
+          "employmentstatusNameEn": {
+            "type": "string"
+          },
+          "employmentstatusNameId": {
+            "type": "string"
+          },
+          "employmentstatusNameTh": {
+            "type": "string"
+          },
+          "employmentstatusNameMy": {
+            "type": "string"
+          },
+          "reqEmploymentdate": {
+            "type": "string"
+          },
+          "orderNo": {
+            "type": "number"
+          },
+          "setpermanentdate": {
+            "type": "string"
+          },
+          "lettertemplateName": {
+            "type": "string"
+          },
+          "patterngroup": {
+            "type": "string"
+          },
+          "remindEmploymentdate": {
+            "type": "string"
+          },
+          "remindBefnum": {
+            "type": "number"
+          },
+          "remindBeftype": {
+            "type": "string"
+          },
+          "codeType": {
+            "type": "string"
+          }
+        }
+      },
+      "Teomorglevel": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "nameEn": {
+            "type": "number"
+          },
+          "nameId": {
+            "type": "string"
+          },
+          "nameMy": {
+            "type": "string"
+          },
+          "nameTh": {
+            "type": "string"
+          },
+          "orderNo": {
+            "type": "number"
+          }
+        }
+      },
+      "Tpymbank": {
+        "type": "object",
+        "properties": {
+          "bankCode": {
+            "type": "string"
+          },
+          "bankName": {
+            "type": "number"
+          },
+          "bankgroupCode": {
+            "type": "string"
+          },
+          "bankBranch": {
+            "type": "string"
+          },
+          "bankAddress": {
+            "type": "string"
+          },
+          "bankPhone": {
+            "type": "string"
+          },
+          "biCode": {
+            "type": "string"
+          },
+          "CLRCODE": {
+            "type": "string"
+          },
+          "BRANCHCODE": {
+            "type": "string"
+          },
+          "BRANCHSCODE": {
+            "type": "string"
+          }
+        }
+      },
+      "Ttamleavetype": {
+        "type": "object",
+        "properties": {
+          "leaveCode": {
+            "type": "string"
+          },
+          "companyId": {
+            "type": "number"
+          },
+          "leavenameEn": {
+            "type": "string"
+          },
+          "leavenameId": {
+            "type": "string"
+          },
+          "leavenameMy": {
+            "type": "string"
+          },
+          "leavenameTh": {
+            "type": "string"
+          },
+          "eligibilityFormula": {
+            "type": "string"
+          },
+          "daytype": {
+            "type": "string"
+          },
+          "deductedleave": {
+            "type": "string"
+          },
+          "daycount": {
+            "type": "string"
+          },
+          "availableAfter": {
+            "type": "number"
+          },
+          "validperiod": {
+            "type": "number"
+          },
+          "repeatflag": {
+            "type": "string"
+          },
+          "repeatperiod": {
+            "type": "number"
+          },
+          "entitlementcriteria": {
+            "type": "number"
+          },
+          "leaveavailability": {
+            "type": "string"
+          },
+          "incrementalDate": {
+            "type": "number"
+          },
+          "carryover": {
+            "type": "string"
+          },
+          "forfeitedperiod": {
+            "type": "number"
+          },
+          "enableminus": {
+            "type": "string"
+          },
+          "maxminus": {
+            "type": "number"
+          },
+          "rounding": {
+            "type": "number"
+          },
+          "roundingtype": {
+            "type": "string"
+          },
+          "requestDaylimit": {
+            "type": "number"
+          },
+          "attendCode": {
+            "type": "string"
+          },
+          "requestedOnce": {
+            "type": "string"
+          },
+          "validcriteria": {
+            "type": "string"
+          },
+          "proportionalafter": {
+            "type": "string"
+          },
+          "extraleave": {
+            "type": "string"
+          },
+          "extraleaveFormula": {
+            "type": "string"
+          },
+          "maxCarryover": {
+            "type": "number"
+          },
+          "parentFlag": {
+            "type": "string"
+          },
+          "parentCode": {
+            "type": "string"
+          },
+          "prolongfor": {
+            "type": "string"
+          },
+          "unionLeave": {
+            "type": "string"
+          },
+          "specificEnddate": {
+            "type": "number"
+          },
+          "specificEndyear": {
+            "type": "number"
+          },
+          "specificEndmonth": {
+            "type": "number"
+          },
+          "firstproportionalat": {
+            "type": "string"
+          },
+          "validateotherstatusfd": {
+            "type": "string"
+          },
+          "firstmonthProrate": {
+            "type": "number"
+          },
+          "entitlementSpecificdate": {
+            "type": "number"
+          },
+          "entitlementSpecificmonth": {
+            "type": "number"
+          },
+          "prorateday": {
+            "type": "number"
+          },
+          "extraleavePeriod": {
+            "type": "number"
+          },
+          "extraleaveValidperiod": {
+            "type": "number"
+          },
+          "deductionRounding": {
+            "type": "number"
+          },
+          "deductionRoundingtype": {
+            "type": "string"
+          },
+          "hdFirstPostfix": {
+            "type": "string"
+          },
+          "hdSecondPostfix": {
+            "type": "string"
+          },
+          "applytoall": {
+            "type": "number"
+          },
+          "uselimitdate": {
+            "type": "string"
+          },
+          "limitdate": {
+            "type": "number"
+          },
+          "requiredattachment": {
+            "type": "string"
+          },
+          "endvalidavailafter": {
+            "type": "string"
+          },
+          "availafterrepeated": {
+            "type": "string"
+          },
+          "extraleaveEnddate": {
+            "type": "number"
+          },
+          "extraleaveEndmonth": {
+            "type": "number"
+          },
+          "extraleaveEndyear": {
+            "type": "number"
+          },
+          "graceperiod": {
+            "type": "number"
+          },
+          "newcarryover": {
+            "type": "number"
+          },
+          "carryoverbasedon": {
+            "type": "string"
+          },
+          "carryoverby": {
+            "type": "string"
+          },
+          "limitamountcarry": {
+            "type": "string"
+          },
+          "carryoverrounding": {
+            "type": "number"
+          },
+          "carryoverroundingtype": {
+            "type": "string"
+          }
+        }
+      },
+      "Teomjobgrade": {
+        "type": "object",
+        "properties": {
+          "gradeCode": {
+            "type": "string"
+          },
+          "companyId": {
+            "type": "number"
+          },
+          "gradecategoryCode": {
+            "type": "string"
+          },
+          "gradeOrder": {
+            "type": "number"
+          },
+          "minpay": {
+            "type": "number"
+          },
+          "maxpay": {
+            "type": "number"
+          },
+          "gradeName": {
+            "type": "string"
+          },
+          "currencyId": {
+            "type": "string"
+          },
+          "midpay": {
+            "type": "number"
+          },
+          "jfgradeCode": {
+            "type": "string"
+          }
+        }
+      },
+      "Teomjobstatus": {
+        "type": "object",
+        "properties": {
+          "jobstatuscode": {
+            "type": "string"
+          },
+          "jobstatusnameEn": {
+            "type": "string"
+          },
+          "jobstatusnameId": {
+            "type": "string"
+          },
+          "jobstatusnameTh": {
+            "type": "string"
+          },
+          "jobstatusnameMy": {
+            "type": "string"
+          }
+        }
+      },
+      "Tcamresigntype": {
+        "type": "object",
+        "properties": {
+
+        }
+      },
+      "Tcamresignreason": {
+        "type": "object",
+        "properties": {
+
+        }
+      },
+      "FilterPositionDto": {
+        "type": "object",
+        "properties": {
+          "page": {
+            "type": "number",
+            "description": "Page Number"
+          },
+          "limit": {
+            "type": "number",
+            "description": "Limit the number of data each page (Max. 100)"
+          },
+          "position": {
+            "type": "string",
+            "description": "Position Name or Code"
+          }
+        }
+      },
+      "Teomposition": {
+        "type": "object",
+        "properties": {
+          "positionId": {
+            "type": "number"
+          },
+          "posCode": {
+            "type": "string"
+          },
+          "companyId": {
+            "type": "number"
+          },
+          "parentId": {
+            "type": "number"
+          },
+          "posNameEn": {
+            "type": "string"
+          },
+          "posNameId": {
+            "type": "string"
+          },
+          "posNameMy": {
+            "type": "string"
+          },
+          "posNameTh": {
+            "type": "string"
+          },
+          "jobdescEn": {
+            "type": "string"
+          },
+          "jobdescId": {
+            "type": "string"
+          },
+          "jobdescMy": {
+            "type": "string"
+          },
+          "jobdescTh": {
+            "type": "string"
+          },
+          "posLevel": {
+            "type": "number"
+          },
+          "parentPath": {
+            "type": "string"
+          },
+          "posFlag": {
+            "type": "number"
+          },
+          "posActive": {
+            "type": "number"
+          },
+          "deptId": {
+            "type": "number"
+          },
+          "dorder": {
+            "type": "number"
+          },
+          "reportTopos": {
+            "type": "number"
+          },
+          "clevel": {
+            "type": "number"
+          },
+          "corder": {
+            "type": "number"
+          },
+          "changeflag": {
+            "type": "string"
+          },
+          "reportPostype": {
+            "type": "string"
+          },
+          "orgLevel": {
+            "type": "string"
+          },
+          "lstworklocation": {
+            "type": "string"
+          },
+          "lstgradecode": {
+            "type": "string"
+          },
+          "headDiv": {
+            "type": "number"
+          },
+          "jobtitleCode": {
+            "type": "string"
+          },
+          "jobstatuscode": {
+            "type": "string"
+          },
+          "costcenterCode": {
+            "type": "string"
+          },
+          "requireSuccessor": {
+            "type": "string"
+          },
+          "filename": {
+            "type": "string"
+          }
+        }
+      },
+      "Tsfmtimezone": {
+        "type": "object",
+        "properties": {
+
+        }
+      },
+      "Tgemreqstatus": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "nameEn": {
+            "type": "string"
+          },
+          "nameId": {
+            "type": "string"
+          },
+          "nameMy": {
+            "type": "string"
+          },
+          "nameTh": {
+            "type": "string"
+          },
+          "orderNo": {
+            "type": "number"
+          },
+          "createdBy": {
+            "type": "string"
+          },
+          "createdDate": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "modifiedBy": {
+            "type": "string"
+          },
+          "modifiedDate": {
+            "format": "date-time",
+            "type": "string"
+          }
+        }
+      },
+      "FilterCompanyWithQueryDto": {
+        "type": "object",
+        "properties": {
+          "page": {
+            "type": "number",
+            "description": "Page Number"
+          },
+          "limit": {
+            "type": "number",
+            "description": "Limit the number of data each page (Max. 100)"
+          },
+          "query": {
+            "type": "string",
+            "description": "Query (Optional)"
+          }
+        }
+      },
+      "Teomnationality": {
+        "type": "object",
+        "properties": {
+          "nationalityCode": {
+            "type": "string"
+          },
+          "nationalityNameEn": {
+            "type": "string"
+          },
+          "nationalityNameId": {
+            "type": "string"
+          },
+          "nationalityNameTh": {
+            "type": "string"
+          },
+          "nationalityNameMy": {
+            "type": "string"
+          },
+          "createdDate": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "createdBy": {
+            "type": "string"
+          },
+          "modifiedDate": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "modifiedBy": {
+            "type": "string"
+          }
+        }
+      },
+      "FilterCostCenterDto": {
+        "type": "object",
+        "properties": {
+          "page": {
+            "type": "number",
+            "description": "Page Number"
+          },
+          "limit": {
+            "type": "number",
+            "description": "Limit the number of data each page (Max. 100)"
+          },
+          "query": {
+            "type": "string",
+            "description": "Query (Optional)"
+          },
+          "companyId": {
+            "type": "string",
+            "description": "Company Id (Optional)"
+          },
+          "status": {
+            "type": "string",
+            "description": "Status (Optional)"
+          },
+          "depth": {
+            "type": "string",
+            "description": "Depth (Optional)"
+          },
+          "flag": {
+            "type": "string",
+            "description": "Flag (Optional)"
+          },
+          "parentCode": {
+            "type": "string",
+            "description": "Parent Code (Optional)"
+          },
+          "parentPath": {
+            "type": "string",
+            "description": "Parent Path (Optional)"
+          }
+        }
+      },
+      "Teomcostcenter": {
+        "type": "object",
+        "properties": {
+          "costcenterCode": {
+            "type": "string"
+          },
+          "companyId": {
+            "type": "number"
+          },
+          "costcenterNameEn": {
+            "type": "string"
+          },
+          "costcenterNameId": {
+            "type": "string"
+          },
+          "costcenterNameMy": {
+            "type": "string"
+          },
+          "costcenterNameTh": {
+            "type": "string"
+          },
+          "status": {
+            "type": "number"
+          },
+          "depth": {
+            "type": "number"
+          },
+          "flag": {
+            "type": "number"
+          },
+          "parentCode": {
+            "type": "string"
+          },
+          "parentPath": {
+            "type": "string"
+          },
+          "createdDate": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "createdBy": {
+            "type": "string"
+          },
+          "modifiedDate": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "modifiedBy": {
+            "type": "string"
+          }
+        }
+      },
+      "FilterWorklocationDto": {
+        "type": "object",
+        "properties": {
+          "page": {
+            "type": "number",
+            "description": "Page Number"
+          },
+          "limit": {
+            "type": "number",
+            "description": "Limit the number of data each page (Max. 100)"
+          },
+          "query": {
+            "type": "string",
+            "description": "Query (Optional)"
+          },
+          "companyId": {
+            "type": "number",
+            "description": "Company Id (Optional)"
+          },
+          "parentId": {
+            "type": "number",
+            "description": "Parent Id (Optional)"
+          },
+          "countryId": {
+            "type": "number",
+            "description": "Country Id (Optional)"
+          },
+          "stateId": {
+            "type": "number",
+            "description": "State Id (Optional)"
+          },
+          "cityId": {
+            "type": "number",
+            "description": "City Id (Optional)"
+          },
+          "worklocationType": {
+            "type": "string",
+            "description": "Work Location Type (Optional)"
+          }
+        }
+      },
+      "Teomworklocation": {
+        "type": "object",
+        "properties": {
+          "worklocationCode": {
+            "type": "string"
+          },
+          "companyId": {
+            "type": "number"
+          },
+          "worklocationName": {
+            "type": "string"
+          },
+          "parentId": {
+            "type": "number"
+          },
+          "dorder": {
+            "type": "number"
+          },
+          "worklocationAddress": {
+            "type": "string"
+          },
+          "countryId": {
+            "type": "number"
+          },
+          "stateId": {
+            "type": "number"
+          },
+          "cityId": {
+            "type": "number"
+          },
+          "email": {
+            "type": "string"
+          },
+          "fax": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string"
+          },
+          "latLng": {
+            "type": "string"
+          },
+          "worklocationType": {
+            "type": "string"
+          },
+          "maxRadius": {
+            "type": "number"
+          },
+          "createdDate": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "createdBy": {
+            "type": "string"
+          },
+          "modifiedDate": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "modifiedBy": {
+            "type": "string"
+          }
+        }
+      },
+      "Teomreligion": {
+        "type": "object",
+        "properties": {
+          "religionCode": {
+            "type": "string"
+          },
+          "religionNameEn": {
+            "type": "string"
+          },
+          "religionNameId": {
+            "type": "string"
+          },
+          "religionNameTh": {
+            "type": "string"
+          },
+          "religionNameMy": {
+            "type": "string"
+          },
+          "createdDate": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "createdBy": {
+            "type": "string"
+          },
+          "modifiedDate": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "modifiedBy": {
+            "type": "string"
+          }
+        }
+      },
+      "Teomcompany": {
+        "type": "object",
+        "properties": {
+          "companyId": {
+            "type": "number"
+          },
+          "companyCode": {
+            "type": "string"
+          },
+          "companyName": {
+            "type": "string"
+          },
+          "nickName": {
+            "type": "string"
+          },
+          "parentId": {
+            "type": "number"
+          },
+          "isbase": {
+            "type": "number"
+          },
+          "companyType": {
+            "type": "string"
+          },
+          "companyLogo": {
+            "type": "string"
+          },
+          "companyAddress": {
+            "type": "string"
+          },
+          "companyAddress2": {
+            "type": "string"
+          },
+          "companyPhone": {
+            "type": "string"
+          },
+          "companyFax": {
+            "type": "string"
+          },
+          "companyEmail": {
+            "type": "string"
+          },
+          "companyCountry": {
+            "type": "string"
+          },
+          "companyState": {
+            "type": "string"
+          },
+          "companyZipcode": {
+            "type": "string"
+          },
+          "taxfilenumber": {
+            "type": "string"
+          },
+          "taxlocationCode": {
+            "type": "string"
+          },
+          "taxcountry": {
+            "type": "string"
+          },
+          "currencyCode": {
+            "type": "string"
+          },
+          "cityId": {
+            "type": "number"
+          },
+          "stateId": {
+            "type": "number"
+          },
+          "countryId": {
+            "type": "number"
+          },
+          "visionEn": {
+            "type": "string"
+          },
+          "visionId": {
+            "type": "string"
+          },
+          "visionMy": {
+            "type": "string"
+          },
+          "visionTh": {
+            "type": "string"
+          },
+          "missionEn": {
+            "type": "string"
+          },
+          "missionId": {
+            "type": "string"
+          },
+          "missionMy": {
+            "type": "string"
+          },
+          "missionTh": {
+            "type": "string"
+          },
+          "taxoffice": {
+            "type": "string"
+          },
+          "gmtId": {
+            "type": "number"
+          },
+          "localName": {
+            "type": "string"
+          },
+          "uen": {
+            "type": "string"
+          },
+          "createdDate": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "createdBy": {
+            "type": "string"
+          },
+          "modifiedDate": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "modifiedBy": {
+            "type": "string"
+          }
+        }
+      },
+      "FilterClaimDto": {
+        "type": "object",
+        "properties": {
+          "page": {
+            "type": "number",
+            "description": "Page Number"
+          },
+          "limit": {
+            "type": "number",
+            "description": "Limit the number of data each page (Max. 100)"
+          },
+          "empNo": {
+            "type": "string",
+            "description": "Employee Number (Optional)"
+          },
+          "requestNo": {
+            "type": "string",
+            "description": "Request Number (Optional)"
+          },
+          "empId": {
+            "type": "string",
+            "description": "Employee ID (Optional)"
+          },
+          "sort": {
+            "type": "string",
+            "description": "Sorting Option (ex: asc, desc). Descending by Request Date as default."
+          }
+        }
+      },
+      "ClaimDto": {
+        "type": "object",
+        "properties": {
+          "requestNo": {
+            "type": "string"
+          },
+          "requestedBy": {
+            "type": "string"
+          },
+          "requestedByNo": {
+            "type": "string"
+          },
+          "requestedByName": {
+            "type": "string"
+          },
+          "requestedFor": {
+            "type": "string"
+          },
+          "requestedForNo": {
+            "type": "string"
+          },
+          "requestedForName": {
+            "type": "string"
+          },
+          "requestDate": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "remark": {
+            "type": "string"
+          },
+          "approvalStatus": {
+            "type": "number"
+          },
+          "detail": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "FilterLeaveDto": {
+        "type": "object",
+        "properties": {
+          "page": {
+            "type": "number",
+            "description": "Page Number"
+          },
+          "limit": {
+            "type": "number",
+            "description": "Limit the number of data each page (Max. 100)"
+          },
+          "query": {
+            "type": "string",
+            "description": "Query (Optional)"
+          },
+          "empId": {
+            "type": "string",
+            "description": "Employee ID (Optional)"
+          },
+          "empNo": {
+            "type": "string",
+            "description": "Employee Number (Optional)"
+          },
+          "status": {
+            "type": "string",
+            "description": "Leave request status (Optional)"
+          },
+          "type": {
+            "type": "string",
+            "description": "Leave request type, for example: \"Leave Request\" | \"Leave Cancellation Request\" (Optional)"
+          },
+          "leaveCode": {
+            "type": "string",
+            "description": "Leave code (Optional)"
+          },
+          "orgUnit": {
+            "type": "string",
+            "description": "Organization Unit (Optional)"
+          }
+        }
+      },
+      "ViewLeaveNewReport": {
+        "type": "object",
+        "properties": {
+          "empId": {
+            "type": "string"
+          },
+          "empNo": {
+            "type": "string"
+          },
+          "fullName": {
+            "type": "string"
+          },
+          "posNameEn": {
+            "type": "string"
+          },
+          "leavenameEn": {
+            "type": "string"
+          },
+          "leaveCode": {
+            "type": "string"
+          },
+          "leaveStartdate": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "leaveEnddate": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "totaldays": {
+            "type": "number"
+          },
+          "remark": {
+            "type": "string"
+          },
+          "status": {
+            "type": "number"
+          },
+          "typeRequest": {
+            "type": "string"
+          }
+        }
+      },
+      "leaveDetailValidator": {
+        "type": "object",
+        "properties": {
+          "leaveDate": {
+            "type": "string",
+            "description": "Leave Date"
+          },
+          "leaveStarttime": {
+            "type": "string",
+            "description": "Leave Start Time"
+          },
+          "leaveEndtime": {
+            "type": "string",
+            "description": "Leave End Time"
+          },
+          "dayrequesttype": {
+            "type": "string",
+            "description": "Day Request Type: `FD` (Full Day), `HD` (Half Day), `PD` (Part of Day`"
+          }
+        },
+        "required": [
+          "leaveDate",
+          "leaveStarttime",
+          "leaveEndtime",
+          "dayrequesttype"
+        ]
+      },
+      "leaveRequestValidator": {
+        "type": "object",
+        "properties": {
+          "empNo": {
+            "type": "string",
+            "description": "Employee Number"
+          },
+          "leaveCode": {
+            "type": "string",
+            "description": "Leave Code"
+          },
+          "leaveDetail": {
+            "description": "Leave Detail",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/leaveDetailValidator"
+            }
+          }
+        },
+        "required": [
+          "empNo",
+          "leaveCode",
+          "leaveDetail"
+        ]
+      },
+      "getLeaveBalanceDto": {
+        "type": "object",
+        "properties": {
+          "empId": {
+            "type": "string",
+            "description": "Employee Id"
+          },
+          "empNo": {
+            "type": "string",
+            "description": "Employee No"
+          },
+          "lang": {
+            "type": "string",
+            "description": "Languange (id,my,th)"
+          }
+        },
+        "required": [
+          "lang"
+        ]
+      },
+      "leaveTypeDto": {
+        "type": "object",
+        "properties": {
+          "leaveCode": {
+            "type": "string"
+          },
+          "companyId": {
+            "type": "string"
+          },
+          "leavenameEn": {
+            "type": "string"
+          },
+          "leavenameId": {
+            "type": "string"
+          },
+          "leavenameMy": {
+            "type": "string"
+          },
+          "leavenameTh": {
+            "type": "string"
+          },
+          "eligibilityFormula": {
+            "type": "string"
+          },
+          "daytype": {
+            "type": "string"
+          },
+          "deductedleave": {
+            "type": "string"
+          },
+          "daycount": {
+            "type": "string"
+          },
+          "attendCode": {
+            "type": "string"
+          }
+        }
+      },
+      "UserLoginDto": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "Employee Username"
+          },
+          "password": {
+            "type": "string",
+            "description": "Employee Password"
+          },
+          "accountCode": {
+            "type": "string",
+            "description": "Account Code"
+          }
+        },
+        "required": [
+          "username",
+          "password",
+          "accountCode"
+        ]
+      },
+      "UserLoginResponse": {
+        "type": "object",
+        "properties": {
+          "isValid": {
+            "type": "boolean"
+          }
+        }
+      },
+      "FilterOvertimeDto": {
+        "type": "object",
+        "properties": {
+          "page": {
+            "type": "number",
+            "description": "Page Number"
+          },
+          "limit": {
+            "type": "number",
+            "description": "Limit the number of data each page (Max. 100)"
+          },
+          "query": {
+            "type": "string",
+            "description": "Query (Optional)"
+          },
+          "empId": {
+            "type": "string",
+            "description": "Employee ID (Optional)"
+          },
+          "empNo": {
+            "type": "string",
+            "description": "Employee Number (Optional)"
+          },
+          "status": {
+            "type": "string",
+            "description": "Leave request status (Optional)"
+          },
+          "date": {
+            "type": "string",
+            "description": "Overtime date (Optional)"
+          },
+          "orgUnit": {
+            "type": "string",
+            "description": "Organization Unit (Optional)"
+          }
+        }
+      },
+      "ViewOvertimeReport": {
+        "type": "object",
+        "properties": {
+          "empNo": {
+            "type": "string"
+          },
+          "empId": {
+            "type": "string"
+          },
+          "fullName": {
+            "type": "string"
+          },
+          "posNameEn": {
+            "type": "string"
+          },
+          "ovtDate": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "rmAfter": {
+            "type": "number"
+          },
+          "ovtHours": {
+            "type": "number"
+          },
+          "status": {
+            "type": "number"
+          },
+          "remark": {
+            "type": "string"
+          }
+        }
+      },
+      "OvertimeRequestDetailValidator": {
+        "type": "object",
+        "properties": {
+          "ovtdate": {
+            "type": "string",
+            "description": "Overtime Date (YYYY-MM-DD)",
+            "example": "2025-08-08"
+          },
+          "ovttimefrom": {
+            "type": "string",
+            "description": "Overtime Start (HH:MM)",
+            "example": "08:00"
+          },
+          "ovttimeto": {
+            "type": "string",
+            "description": "Overtime To (HH:MM)",
+            "example": "17:00"
+          }
+        },
+        "required": [
+          "ovtdate",
+          "ovttimefrom",
+          "ovttimeto"
+        ]
+      },
+      "OvertimeRequestValidator": {
+        "type": "object",
+        "properties": {
+          "empNo": {
+            "type": "string",
+            "description": "Employee Number"
+          },
+          "ovtreason": {
+            "type": "string",
+            "description": "Overtime Reason Code"
+          },
+          "ovttype": {
+            "type": "string",
+            "description": "Overtime Type: `EXTRALEAVE` or `OVERTIME`"
+          },
+          "remark": {
+            "type": "string",
+            "description": "Remark"
+          },
+          "leavetypecode": {
+            "type": "string",
+            "description": "Leave Type if this overtime being extra leave"
+          },
+          "overtimedetail": {
+            "description": "Overtime Detail",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OvertimeRequestDetailValidator"
+            }
+          }
+        },
+        "required": [
+          "empNo",
+          "overtimedetail"
+        ]
+      },
+      "FilterActivityDto": {
+        "type": "object",
+        "properties": {
+          "page": {
+            "type": "number",
+            "description": "Page Number"
+          },
+          "limit": {
+            "type": "number",
+            "description": "Limit the number of data each page (Max. 100)"
+          },
+          "empId": {
+            "type": "string",
+            "description": "Employee ID (Optional)"
+          },
+          "empNo": {
+            "type": "string",
+            "description": "Employee Number (Optional)"
+          },
+          "startDate": {
+            "format": "date-time",
+            "type": "string",
+            "description": "Start Date"
+          },
+          "endDate": {
+            "format": "date-time",
+            "type": "string",
+            "description": "End Date"
+          },
+          "orgUnit": {
+            "type": "string",
+            "description": "Organization Unit (Optional)"
+          }
+        },
+        "required": [
+          "startDate",
+          "endDate"
+        ]
+      },
+      "Tgospactivitytypelist": {
+        "type": "object",
+        "properties": {
+
+        }
+      },
+      "Tgospactivity": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "empId": {
+            "type": "string"
+          },
+          "companyId": {
+            "type": "number"
+          },
+          "companyCode": {
+            "type": "string"
+          },
+          "dateTime": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "taskDesc": {
+            "type": "string"
+          },
+          "taskCode": {
+            "type": "string"
+          },
+          "location": {
+            "type": "string"
+          },
+          "attOn": {
+            "type": "number"
+          },
+          "images": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "type": {
+            "$ref": "#/components/schemas/Tgospactivitytypelist"
+          },
+          "typeValue": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "TrackerReportValidator": {
+        "type": "object",
+        "properties": {
+          "startDate": {
+            "format": "date-time",
+            "type": "string",
+            "description": "Start Date (Optional)"
+          },
+          "endDate": {
+            "format": "date-time",
+            "type": "string",
+            "description": "End Date (Optional)"
+          },
+          "empId": {
+            "type": "string",
+            "description": "Employee ID (Optional)"
+          },
+          "empNo": {
+            "type": "string",
+            "description": "Employee Number (Optional)"
+          },
+          "positionId": {
+            "type": "string",
+            "description": "Position ID (Optional)"
+          },
+          "page": {
+            "type": "number",
+            "description": "Page Number"
+          },
+          "limit": {
+            "type": "number",
+            "description": "Limit the number of data each page (Max. 100)"
+          }
+        }
+      },
+      "TrackerReportDto": {
+        "type": "object",
+        "properties": {
+          "dateAndTime": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "empId": {
+            "type": "string"
+          },
+          "empNo": {
+            "type": "string"
+          },
+          "worklocationName": {
+            "type": "string"
+          },
+          "costcenterName": {
+            "type": "string"
+          },
+          "posNameEn": {
+            "type": "string"
+          },
+          "orgUnit": {
+            "type": "string"
+          },
+          "trackerId": {
+            "type": "number"
+          }
+        }
+      },
+      "TrackerDetailValidator": {
+        "type": "object",
+        "properties": {
+          "startDate": {
+            "format": "date-time",
+            "type": "string",
+            "description": "Start Date"
+          },
+          "endDate": {
+            "format": "date-time",
+            "type": "string",
+            "description": "End Date"
+          },
+          "page": {
+            "type": "number",
+            "description": "Page Number"
+          },
+          "limit": {
+            "type": "number",
+            "description": "Limit the number of data each page (Max. 100)"
+          },
+          "trackerId": {
+            "type": "number",
+            "description": "Tracker ID"
+          }
+        }
+      },
+      "TrackerDetailDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "trackerId": {
+            "type": "string"
+          },
+          "dateAndTime": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "empId": {
+            "type": "string"
+          },
+          "empNo": {
+            "type": "string"
+          },
+          "workPlace": {
+            "type": "string"
+          },
+          "worklocationName": {
+            "type": "string"
+          },
+          "costcenterName": {
+            "type": "string"
+          },
+          "latitude": {
+            "type": "string"
+          },
+          "longitude": {
+            "type": "string"
+          },
+          "urlMaps": {
+            "type": "string"
+          }
+        }
+      },
+      "LoginDto": {
+        "type": "object",
+        "properties": {
+          "accessKey": {
+            "type": "string",
+            "description": "Access Key"
+          },
+          "accessSecret": {
+            "type": "string",
+            "description": "Access Secret"
+          }
+        },
+        "required": [
+          "accessKey",
+          "accessSecret"
+        ]
+      },
+      "TokenDto": {
+        "type": "object",
+        "properties": {
+          "accessToken": {
+            "type": "string",
+            "description": "Access Token"
+          },
+          "refreshToken": {
+            "type": "string",
+            "description": "Refresh Token"
+          },
+          "createdAt": {
+            "type": "string",
+            "description": "Access Token Created"
+          },
+          "expiredAt": {
+            "type": "string",
+            "description": "Access Token Expired"
+          }
+        }
+      },
+      "RefreshDto": {
+        "type": "object",
+        "properties": {
+          "refreshToken": {
+            "type": "string",
+            "description": "Refresh Token"
+          }
+        },
+        "required": [
+          "refreshToken"
+        ]
+      },
+      "RegisterDto": {
+        "type": "object",
+        "properties": {
+
+        }
+      }
+    }
+  },
+  "x-tagGroups": [
+    {
+      "name": "General",
+      "tags": [
+        "Authentication",
+        "Company",
+        "Employee",
+        "Attendance",
+        "Overtime",
+        "Leave",
+        "Activity Report",
+        "Tracker Report",
+        "Claim",
+        "Login Validation"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+# Node modules and build artifacts
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Local environment and secrets
+.env
+.env.local
+.env.*.local
+
+# State and logs
+state.json
+logs/
+*.log
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+

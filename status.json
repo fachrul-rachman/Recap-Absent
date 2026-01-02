@@ -1,0 +1,717 @@
+{
+    "message": "Success",
+    "data": [
+        {
+            "attendCode": "ABS",
+            "attendNameEn": "Absent",
+            "attendNameId": "Tidak Hadir",
+            "attendNameMy": "Tidak Hadir",
+            "attendNameTh": "Absent",
+            "presentFlag": "N"
+        },
+        {
+            "attendCode": "ABS_PH",
+            "attendNameEn": "Absent Preceding Holiday",
+            "attendNameId": "Absent Preceding Holiday",
+            "attendNameMy": "Absent Preceding Holiday",
+            "attendNameTh": "Absent Preceding Holiday",
+            "presentFlag": "N"
+        },
+        {
+            "attendCode": "ANL",
+            "attendNameEn": "Annual Leave",
+            "attendNameId": "Annual Leave",
+            "attendNameMy": "Annual Leave",
+            "attendNameTh": "Annual Leave",
+            "presentFlag": "N"
+        },
+        {
+            "attendCode": "BPT",
+            "attendNameEn": "Baptism",
+            "attendNameId": "Baptis",
+            "attendNameMy": "Baptis",
+            "attendNameTh": "Baptism",
+            "presentFlag": "N"
+        },
+        {
+            "attendCode": "BREAK1_EAI",
+            "attendNameEn": "Break 1 Early In",
+            "attendNameId": "Break 1 Early In",
+            "attendNameMy": "Break 1 Early In",
+            "attendNameTh": "Break 1 Early In",
+            "presentFlag": "Y"
+        },
+        {
+            "attendCode": "BREAK1_EAO",
+            "attendNameEn": "Break 1 Early Out",
+            "attendNameId": "Break 1 Early Out",
+            "attendNameMy": "Break 1 Early Out",
+            "attendNameTh": "Break 1 Early Out",
+            "presentFlag": "Y"
+        },
+        {
+            "attendCode": "BREAK1_LTI",
+            "attendNameEn": "Break 1 Late In",
+            "attendNameId": "Break 1 Late In",
+            "attendNameMy": "Break 1 Late In",
+            "attendNameTh": "Break 1 Late In",
+            "presentFlag": "Y"
+        },
+        {
+            "attendCode": "BREAK1_LTO",
+            "attendNameEn": "Break 1 Late Out",
+            "attendNameId": "Break 1 Late Out",
+            "attendNameMy": "Break 1 Late Out",
+            "attendNameTh": "Break 1 Late Out",
+            "presentFlag": "Y"
+        },
+        {
+            "attendCode": "BREAK2_EAI",
+            "attendNameEn": "Break 2 Early In",
+            "attendNameId": "Break 2 Early In",
+            "attendNameMy": "Break 2 Early In",
+            "attendNameTh": "Break 2 Early In",
+            "presentFlag": "Y"
+        },
+        {
+            "attendCode": "BREAK2_EAO",
+            "attendNameEn": "Break 2 Early Out",
+            "attendNameId": "Break 2 Early Out",
+            "attendNameMy": "Break 2 Early Out",
+            "attendNameTh": "Break 2 Early Out",
+            "presentFlag": "Y"
+        },
+        {
+            "attendCode": "BREAK2_LTI",
+            "attendNameEn": "Break 2 Late In",
+            "attendNameId": "Break 2 Late In",
+            "attendNameMy": "Break 2 Late In",
+            "attendNameTh": "Break 2 Late In",
+            "presentFlag": "Y"
+        },
+        {
+            "attendCode": "BREAK2_LTO",
+            "attendNameEn": "Break 2 Late Out",
+            "attendNameId": "Break 2 Late Out",
+            "attendNameMy": "Break 2 Late Out",
+            "attendNameTh": "Break 2 Late Out",
+            "presentFlag": "Y"
+        },
+        {
+            "attendCode": "BREAK3_EAI",
+            "attendNameEn": "Break 3 Early In",
+            "attendNameId": "Break 3 Early In",
+            "attendNameMy": "Break 3 Early In",
+            "attendNameTh": "Break 3 Early In",
+            "presentFlag": "Y"
+        },
+        {
+            "attendCode": "BREAK3_EAO",
+            "attendNameEn": "Break 3 Early Out",
+            "attendNameId": "Break 3 Early Out",
+            "attendNameMy": "Break 3 Early Out",
+            "attendNameTh": "Break 3 Early Out",
+            "presentFlag": "Y"
+        },
+        {
+            "attendCode": "BREAK3_LTI",
+            "attendNameEn": "Break 3 Late In",
+            "attendNameId": "Break 3 Late In",
+            "attendNameMy": "Break 3 Late In",
+            "attendNameTh": "Break 3 Late In",
+            "presentFlag": "Y"
+        },
+        {
+            "attendCode": "BREAK3_LTO",
+            "attendNameEn": "Break 3 Late Out",
+            "attendNameId": "Break 3 Late Out",
+            "attendNameMy": "Break 3 Late Out",
+            "attendNameTh": "Break 3 Late Out",
+            "presentFlag": "Y"
+        },
+        {
+            "attendCode": "BREAK4_EAI",
+            "attendNameEn": "Break 4 Early In",
+            "attendNameId": "Break 4 Early In",
+            "attendNameMy": "Break 4 Early In",
+            "attendNameTh": "Break 4 Early In",
+            "presentFlag": "Y"
+        },
+        {
+            "attendCode": "BREAK4_EAO",
+            "attendNameEn": "Break 4 Early Out",
+            "attendNameId": "Break 4 Early Out",
+            "attendNameMy": "Break 4 Early Out",
+            "attendNameTh": "Break 4 Early Out",
+            "presentFlag": "Y"
+        },
+        {
+            "attendCode": "BREAK4_LTI",
+            "attendNameEn": "Break 4 Late In",
+            "attendNameId": "Break 4 Late In",
+            "attendNameMy": "Break 4 Late In",
+            "attendNameTh": "Break 4 Late In",
+            "presentFlag": "Y"
+        },
+        {
+            "attendCode": "BREAK4_LTO",
+            "attendNameEn": "Break 4 Late Out",
+            "attendNameId": "Break 4 Late Out",
+            "attendNameMy": "Break 4 Late Out",
+            "attendNameTh": "Break 4 Late Out",
+            "presentFlag": "Y"
+        },
+        {
+            "attendCode": "BREAK5_EAI",
+            "attendNameEn": "Break 5 Early In",
+            "attendNameId": "Break 5 Early In",
+            "attendNameMy": "Break 5 Early In",
+            "attendNameTh": "Break 5 Early In",
+            "presentFlag": "Y"
+        },
+        {
+            "attendCode": "BREAK5_EAO",
+            "attendNameEn": "Break 5 Early Out",
+            "attendNameId": "Break 5 Early Out",
+            "attendNameMy": "Break 5 Early Out",
+            "attendNameTh": "Break 5 Early Out",
+            "presentFlag": "Y"
+        },
+        {
+            "attendCode": "BREAK5_LTI",
+            "attendNameEn": "Break 5 Late In",
+            "attendNameId": "Break 5 Late In",
+            "attendNameMy": "Break 5 Late In",
+            "attendNameTh": "Break 5 Late In",
+            "presentFlag": "Y"
+        },
+        {
+            "attendCode": "BREAK5_LTO",
+            "attendNameEn": "Break 5 Late Out",
+            "attendNameId": "Break 5 Late Out",
+            "attendNameMy": "Break 5 Late Out",
+            "attendNameTh": "Break 5 Late Out",
+            "presentFlag": "Y"
+        },
+        {
+            "attendCode": "BST",
+            "attendNameEn": "Business On Trip",
+            "attendNameId": "Business On Trip",
+            "attendNameMy": "Business On Trip",
+            "attendNameTh": "Business On Trip",
+            "presentFlag": "Y"
+        },
+        {
+            "attendCode": "COMP",
+            "attendNameEn": "Compassionate",
+            "attendNameId": "Compassionate",
+            "attendNameMy": "Compassionate",
+            "attendNameTh": "Compassionate",
+            "presentFlag": "N"
+        },
+        {
+            "attendCode": "CST",
+            "attendNameEn": "Circumcision",
+            "attendNameId": "Circumcision",
+            "attendNameMy": "Circumcision",
+            "attendNameTh": "Circumcision",
+            "presentFlag": "N"
+        },
+        {
+            "attendCode": "DIF",
+            "attendNameEn": "Decease of Family",
+            "attendNameId": "Decease of Family",
+            "attendNameMy": "Decease of Family",
+            "attendNameTh": "Decease of Family",
+            "presentFlag": "N"
+        },
+        {
+            "attendCode": "EAO",
+            "attendNameEn": "Early Out",
+            "attendNameId": "Early Out",
+            "attendNameMy": "Early Out",
+            "attendNameTh": "Early Out",
+            "presentFlag": "Y"
+        },
+        {
+            "attendCode": "ECB",
+            "attendNameEn": "Employee Child Birth",
+            "attendNameId": "Employee Child Birth",
+            "attendNameMy": "Employee Child Birth",
+            "attendNameTh": "Employee Child Birth",
+            "presentFlag": "N"
+        },
+        {
+            "attendCode": "EDO",
+            "attendNameEn": "Extra Day Off",
+            "attendNameId": "Extra Day Off",
+            "attendNameMy": "Extra Day Off",
+            "attendNameTh": "Extra Day Off",
+            "presentFlag": "N"
+        },
+        {
+            "attendCode": "EL",
+            "attendNameEn": "Emergency Leave",
+            "attendNameId": "Emergency Leave",
+            "attendNameMy": "Emergency Leave",
+            "attendNameTh": "Emergency Leave",
+            "presentFlag": "N"
+        },
+        {
+            "attendCode": "FCM",
+            "attendNameEn": "Force Major",
+            "attendNameId": "Force Major",
+            "attendNameMy": "Force Major",
+            "attendNameTh": "Force Major",
+            "presentFlag": "N"
+        },
+        {
+            "attendCode": "GVL",
+            "attendNameEn": "Grievance Leave",
+            "attendNameId": "Grievance Leave",
+            "attendNameMy": "Grievance Leave",
+            "attendNameTh": "Grievance Leave",
+            "presentFlag": "N"
+        },
+        {
+            "attendCode": "HOS",
+            "attendNameEn": "Hospitalization",
+            "attendNameId": "Hospitalization",
+            "attendNameMy": "Hospitalization",
+            "attendNameTh": "Hospitalization",
+            "presentFlag": "N"
+        },
+        {
+            "attendCode": "HPERMIT",
+            "attendNameEn": "HPERMIT",
+            "attendNameId": "HPERMIT",
+            "attendNameMy": "HPERMIT",
+            "attendNameTh": "HPERMIT",
+            "presentFlag": "N"
+        },
+        {
+            "attendCode": "LOL",
+            "attendNameEn": "Long Leave",
+            "attendNameId": "Long Leave",
+            "attendNameMy": "Long Leave",
+            "attendNameTh": "Long Leave",
+            "presentFlag": "N"
+        },
+        {
+            "attendCode": "LTI",
+            "attendNameEn": "Late In",
+            "attendNameId": "Terlambat",
+            "attendNameMy": "Terlambat",
+            "attendNameTh": "Late In",
+            "presentFlag": "Y"
+        },
+        {
+            "attendCode": "LTI1",
+            "attendNameEn": "Late Time In 1",
+            "attendNameId": "Late Time In 1",
+            "attendNameMy": "Late Time In 1",
+            "attendNameTh": "Late Time In 1",
+            "presentFlag": "Y"
+        },
+        {
+            "attendCode": "LTI2",
+            "attendNameEn": "Late Time In 2",
+            "attendNameId": "Late Time In 2",
+            "attendNameMy": "Late Time In 2",
+            "attendNameTh": "Late Time In 2",
+            "presentFlag": "N"
+        },
+        {
+            "attendCode": "LTI3",
+            "attendNameEn": "Late Time In 3",
+            "attendNameId": "Late Time In 3",
+            "attendNameMy": "Late Time In 3",
+            "attendNameTh": "Late Time In 3",
+            "presentFlag": "N"
+        },
+        {
+            "attendCode": "LTI4",
+            "attendNameEn": "Late Time In 4",
+            "attendNameId": "Late Time In 4",
+            "attendNameMy": "Late Time In 4",
+            "attendNameTh": "Late Time In 4",
+            "presentFlag": "N"
+        },
+        {
+            "attendCode": "LTI5",
+            "attendNameEn": "Late Time In 5",
+            "attendNameId": "Late Time In 5",
+            "attendNameMy": "Late Time In 5",
+            "attendNameTh": "Late Time In 5",
+            "presentFlag": "N"
+        },
+        {
+            "attendCode": "MAT",
+            "attendNameEn": "Maternity Leave",
+            "attendNameId": "Maternity Leave",
+            "attendNameMy": "Maternity Leave",
+            "attendNameTh": "Maternity Leave",
+            "presentFlag": "N"
+        },
+        {
+            "attendCode": "MC",
+            "attendNameEn": "Medical Leave",
+            "attendNameId": "Medical Leave",
+            "attendNameMy": "Medical Leave",
+            "attendNameTh": "Medical Leave",
+            "presentFlag": "N"
+        },
+        {
+            "attendCode": "MDL",
+            "attendNameEn": "Married Leave",
+            "attendNameId": "Married Leave",
+            "attendNameMy": "Married Leave",
+            "attendNameTh": "Married Leave",
+            "presentFlag": "N"
+        },
+        {
+            "attendCode": "Miscarriage",
+            "attendNameEn": "Miscarriage",
+            "attendNameId": "Miscarriage",
+            "attendNameMy": "Miscarriage",
+            "attendNameTh": "Miscarriage",
+            "presentFlag": "N"
+        },
+        {
+            "attendCode": "NSI",
+            "attendNameEn": "No Swipe In",
+            "attendNameId": "Tidak Absen Masuk",
+            "attendNameMy": "Tidak Absen Masuk",
+            "attendNameTh": "No Swipe In",
+            "presentFlag": "Y"
+        },
+        {
+            "attendCode": "NSO",
+            "attendNameEn": "No Swipe Out",
+            "attendNameId": "No Swipe Out",
+            "attendNameMy": "No Swipe Out",
+            "attendNameTh": "No Swipe Out",
+            "presentFlag": "Y"
+        },
+        {
+            "attendCode": "OC1",
+            "attendNameEn": "On Call 1",
+            "attendNameId": "On Call 1",
+            "attendNameMy": "On Call 1",
+            "attendNameTh": "On Call 1",
+            "presentFlag": "Y"
+        },
+        {
+            "attendCode": "OC1_PRS",
+            "attendNameEn": "On Call 1 Present",
+            "attendNameId": "On Call 1 Present",
+            "attendNameMy": "On Call 1 Present",
+            "attendNameTh": "On Call 2 Present",
+            "presentFlag": "Y"
+        },
+        {
+            "attendCode": "OC2",
+            "attendNameEn": "On Call 2",
+            "attendNameId": "On Call 2",
+            "attendNameMy": "On Call 2",
+            "attendNameTh": "On Call 2",
+            "presentFlag": "Y"
+        },
+        {
+            "attendCode": "OC2_PRS",
+            "attendNameEn": "On Call 2 Present",
+            "attendNameId": "On Call 2 Present",
+            "attendNameMy": "On Call 2 Present",
+            "attendNameTh": "On Call 2 Present",
+            "presentFlag": "Y"
+        },
+        {
+            "attendCode": "OC3",
+            "attendNameEn": "On Call 3",
+            "attendNameId": "On Call 3",
+            "attendNameMy": "On Call 3",
+            "attendNameTh": "On Call 3",
+            "presentFlag": "Y"
+        },
+        {
+            "attendCode": "OC3_PRS",
+            "attendNameEn": "On Call 3 Present",
+            "attendNameId": "On Call 3 Present",
+            "attendNameMy": "On Call 3 Present",
+            "attendNameTh": "On Call 3 Present",
+            "presentFlag": "Y"
+        },
+        {
+            "attendCode": "OC4",
+            "attendNameEn": "On Call 4",
+            "attendNameId": "On Call 4",
+            "attendNameMy": "On Call 4",
+            "attendNameTh": "On Call 4",
+            "presentFlag": "Y"
+        },
+        {
+            "attendCode": "OC4_PRS",
+            "attendNameEn": "On Call 4 Present",
+            "attendNameId": "On Call 4 Present",
+            "attendNameMy": "On Call 4 Present",
+            "attendNameTh": "On Call 4 Present",
+            "presentFlag": "Y"
+        },
+        {
+            "attendCode": "OC5",
+            "attendNameEn": "On Call 5",
+            "attendNameId": "On Call 5",
+            "attendNameMy": "On Call 5",
+            "attendNameTh": "On Call 5",
+            "presentFlag": "Y"
+        },
+        {
+            "attendCode": "OC5_PRS",
+            "attendNameEn": "On Call 5 Present",
+            "attendNameId": "On Call 5 Present",
+            "attendNameMy": "On Call 5 Present",
+            "attendNameTh": "On Call 5 Present",
+            "presentFlag": "Y"
+        },
+        {
+            "attendCode": "OFF",
+            "attendNameEn": "Off",
+            "attendNameId": "Off",
+            "attendNameMy": "Off",
+            "attendNameTh": "Off",
+            "presentFlag": "N"
+        },
+        {
+            "attendCode": "OT",
+            "attendNameEn": "Overtime",
+            "attendNameId": "Overtime",
+            "attendNameMy": "Overtime",
+            "attendNameTh": "Overtime",
+            "presentFlag": "Y"
+        },
+        {
+            "attendCode": "OTWD",
+            "attendNameEn": "Overtime Working Days",
+            "attendNameId": "Overtime Working Days",
+            "attendNameMy": "Overtime Working Days",
+            "attendNameTh": "Overtime Working Days",
+            "presentFlag": "Y"
+        },
+        {
+            "attendCode": "OVH",
+            "attendNameEn": "Overtime Holiday",
+            "attendNameId": "Overtime Holiday",
+            "attendNameMy": "Overtime Holiday",
+            "attendNameTh": "Overtime Holiday",
+            "presentFlag": "Y"
+        },
+        {
+            "attendCode": "OVT",
+            "attendNameEn": "Overtime Regular",
+            "attendNameId": "Overtime Regular",
+            "attendNameMy": "Overtime Regular",
+            "attendNameTh": "Overtime Regular",
+            "presentFlag": "Y"
+        },
+        {
+            "attendCode": "PERMIT",
+            "attendNameEn": "Permit",
+            "attendNameId": "Permit",
+            "attendNameMy": "Permit",
+            "attendNameTh": "Permit",
+            "presentFlag": "N"
+        },
+        {
+            "attendCode": "PERMITH1",
+            "attendNameEn": "Ijin Kerja Setengah Hari",
+            "attendNameId": "Ijin Kerja Setengah Hari",
+            "attendNameMy": "Ijin Kerja Setengah Hari",
+            "attendNameTh": "Ijin Kerja Setengah Hari",
+            "presentFlag": "N"
+        },
+        {
+            "attendCode": "PERMITH2",
+            "attendNameEn": "Ijin Kerja Setengah Hari",
+            "attendNameId": "Ijin Kerja Setengah Hari",
+            "attendNameMy": "Ijin Kerja Setengah Hari",
+            "attendNameTh": "Ijin Kerja Setengah Hari",
+            "presentFlag": "N"
+        },
+        {
+            "attendCode": "PFP",
+            "attendNameEn": "Prolonged Medical Leave",
+            "attendNameId": "Prolonged Medical Leave",
+            "attendNameMy": "Prolonged Medical Leave",
+            "attendNameTh": "Prolonged Medical Leave",
+            "presentFlag": "N"
+        },
+        {
+            "attendCode": "PHPRS",
+            "attendNameEn": "Public Holiday Present",
+            "attendNameId": "Hadir Hari Libur",
+            "attendNameMy": "Public Holiday Present",
+            "attendNameTh": "Public Holiday Present",
+            "presentFlag": "Y"
+        },
+        {
+            "attendCode": "PIL",
+            "attendNameEn": "Pilgrimage Leave",
+            "attendNameId": "Pilgrimage Leave",
+            "attendNameMy": "Pilgrimage Leave",
+            "attendNameTh": "Pilgrimage Leave",
+            "presentFlag": "N"
+        },
+        {
+            "attendCode": "Pilgriamage",
+            "attendNameEn": "Pilgriamage",
+            "attendNameId": "Pilgriamage",
+            "attendNameMy": "Pilgriamage",
+            "attendNameTh": "Pilgriamage",
+            "presentFlag": "N"
+        },
+        {
+            "attendCode": "PL",
+            "attendNameEn": "Paternity Leave",
+            "attendNameId": "Paternity Leave",
+            "attendNameMy": "Paternity Leave",
+            "attendNameTh": "Paternity Leave",
+            "presentFlag": "N"
+        },
+        {
+            "attendCode": "PNI",
+            "attendNameEn": "Penalty No In",
+            "attendNameId": "Penalti Karena Tidak Masuk",
+            "attendNameMy": "Penalti Karena Tidak Masuk",
+            "attendNameTh": "Penalty No In",
+            "presentFlag": "Y"
+        },
+        {
+            "attendCode": "PRS",
+            "attendNameEn": "Present",
+            "attendNameId": "Hadir",
+            "attendNameMy": "Hadir",
+            "attendNameTh": "Present",
+            "presentFlag": "Y"
+        },
+        {
+            "attendCode": "PRSWD",
+            "attendNameEn": "Work Day Present",
+            "attendNameId": "Work Day Present",
+            "attendNameMy": "Work Day Present",
+            "attendNameTh": "Work Day Present",
+            "presentFlag": "Y"
+        },
+        {
+            "attendCode": "RL",
+            "attendNameEn": "Replacement Leave",
+            "attendNameId": "Replacement Leave",
+            "attendNameMy": "Replacement Leave",
+            "attendNameTh": "Replacement Leave",
+            "presentFlag": "N"
+        },
+        {
+            "attendCode": "SDC",
+            "attendNameEn": "Sick",
+            "attendNameId": "Sick",
+            "attendNameMy": "Sick",
+            "attendNameTh": "Sick",
+            "presentFlag": "N"
+        },
+        {
+            "attendCode": "SL",
+            "attendNameEn": "Sick Leave",
+            "attendNameId": "Sick Leave",
+            "attendNameMy": "Sick Leave",
+            "attendNameTh": "Sick Leave",
+            "presentFlag": "N"
+        },
+        {
+            "attendCode": "SP",
+            "attendNameEn": "Solo Parent",
+            "attendNameId": "Solo Parent",
+            "attendNameMy": "Solo Parent",
+            "attendNameTh": "Solo Parent",
+            "presentFlag": "N"
+        },
+        {
+            "attendCode": "SUSP",
+            "attendNameEn": "Suspension",
+            "attendNameId": "Terkena Sanksi",
+            "attendNameMy": "Terkena Sanksi",
+            "attendNameTh": "Suspension",
+            "presentFlag": "N"
+        },
+        {
+            "attendCode": "SWC",
+            "attendNameEn": "Sick With Certification From Doctor",
+            "attendNameId": "Sakit dengan surat dokter",
+            "attendNameMy": "Sakit dengan surat dokter",
+            "attendNameTh": "Sick With Certification From Doctor",
+            "presentFlag": "N"
+        },
+        {
+            "attendCode": "TR1",
+            "attendNameEn": "Inhouse Training",
+            "attendNameId": "Training di rumah",
+            "attendNameMy": "Training di rumah",
+            "attendNameTh": "Inhouse Training",
+            "presentFlag": "N"
+        },
+        {
+            "attendCode": "UK",
+            "attendNameEn": "Unknown",
+            "attendNameId": "Tidak Diketahui",
+            "attendNameMy": "Tidak Diketahui",
+            "attendNameTh": "Unknown",
+            "presentFlag": "N"
+        },
+        {
+            "attendCode": "UNPR",
+            "attendNameEn": "Unproductive",
+            "attendNameId": "Tidak Produktif",
+            "attendNameMy": "Unproductive",
+            "attendNameTh": "",
+            "presentFlag": "Y"
+        },
+        {
+            "attendCode": "UPL",
+            "attendNameEn": "Unpaid Leave",
+            "attendNameId": "Unpaid Leave",
+            "attendNameMy": "Unpaid Leave",
+            "attendNameTh": "Unpaid Leave",
+            "presentFlag": "N"
+        },
+        {
+            "attendCode": "UPLH1",
+            "attendNameEn": "First Half Day Unpaid Leave",
+            "attendNameId": "First Half Day Unpaid Leave",
+            "attendNameMy": "First Half Day Unpaid Leave",
+            "attendNameTh": "First Half Day Unpaid Leave",
+            "presentFlag": "Y"
+        },
+        {
+            "attendCode": "UPLH2",
+            "attendNameEn": "Second Half Day Unpaid Leave",
+            "attendNameId": "Second Half Day Unpaid Leave",
+            "attendNameMy": "Second Half Day Unpaid Leave",
+            "attendNameTh": "Second Half Day Unpaid Leave",
+            "presentFlag": "Y"
+        },
+        {
+            "attendCode": "VL",
+            "attendNameEn": "Vacation Leave",
+            "attendNameId": "Vacation Leave",
+            "attendNameMy": "Vacation Leave",
+            "attendNameTh": "Vacation Leave",
+            "presentFlag": "N"
+        },
+        {
+            "attendCode": "WED",
+            "attendNameEn": "Matrimonial Leave",
+            "attendNameId": "Matrimonial Leave",
+            "attendNameMy": "Matrimonial Leave",
+            "attendNameTh": "Matrimonial Leave",
+            "presentFlag": "N"
+        }
+    ]
+}

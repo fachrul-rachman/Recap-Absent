@@ -50,6 +50,7 @@ ACCESS_SECRET=...
 DISCORD_WEBHOOK_URL=...
 STATE_FILE=state.json
 PORT=3002
+API_KEY=supersecret_api_key_for_server
 ```
 
 Keterangan:
@@ -58,7 +59,8 @@ Keterangan:
 - `SECRET_KEY` / `ACCESS_SECRET` — credential untuk `/auth/login` (jangan dibuka ke publik).
 - `DISCORD_WEBHOOK_URL` — URL webhook Discord target.
 - `STATE_FILE` — path file state idempotency (default `state.json` relatif ke cwd).
-- `PORT` — port HTTP server (`src/server.mjs`), default `3000`.
+- `PORT` — port HTTP server (`src/server.mjs`), default `3002`.
+- `API_KEY` — (opsional tapi disarankan) token sederhana untuk proteksi endpoint `/run`.
 
 `src/env.mjs` akan otomatis memuat `.env` pada saat CLI maupun server dijalankan.
 
@@ -191,6 +193,13 @@ Server membaca `.env` yang sama dan mengikat ke port `PORT` (default `3002`).
    - `POST /run?mode=weekly`
    - `POST /run?mode=monthly&force=true`
 
+   Jika `API_KEY` diset di `.env`, setiap request ke `/run` harus menyertakan API key, misalnya:
+
+   - Di header:
+     - `x-api-key: supersecret_api_key_for_server`
+   - Atau di query string:
+     - `POST /run?mode=daily&apiKey=supersecret_api_key_for_server`
+
    Respon sukses (laporan terkirim):
 
    ```json
@@ -235,6 +244,7 @@ Server membaca `.env` yang sama dan mengikat ke port `PORT` (default `3002`).
 Konsep (non-teknis):
 
 - Buat workflow di n8n dengan `HTTP Request` node yang memanggil `POST /run` ke VPS tempat server ini berjalan.
+  - Tambahkan header `x-api-key` jika `API_KEY` diaktifkan.
 - Scheduler di n8n (Cron node):
   - Daily: setiap hari 09:00 WIB → `mode=daily`.
   - Weekly: Sabtu 09:05 WIB → `mode=weekly`.

@@ -20,6 +20,21 @@ function parseBoolean(value) {
   return v === "1" || v === "true" || v === "yes" || v === "y";
 }
 
+function isAuthorized(req, url) {
+  const expected = process.env.API_KEY;
+  if (!expected) {
+    // Jika API_KEY tidak diset, jangan blokir (mode non‑auth).
+    return true;
+  }
+
+  const headerKey =
+    (req.headers && (req.headers["x-api-key"] || req.headers["X-API-Key"])) || "";
+  const queryKey = url.searchParams.get("apiKey") || url.searchParams.get("token") || "";
+
+  const provided = String(headerKey || queryKey || "").trim();
+  return provided.length > 0 && provided === expected;
+}
+
 async function handleRun(req, res, url) {
   const mode = url.searchParams.get("mode");
   const force = parseBoolean(url.searchParams.get("force"));
@@ -79,6 +94,13 @@ const server = http.createServer(async (req, res) => {
     }
 
     if (req.method === "POST" && url.pathname === "/run") {
+      if (!isAuthorized(req, url)) {
+        sendJson(res, 401, {
+          status: "error",
+          error: "Unauthorized",
+        });
+        return;
+      }
       await handleRun(req, res, url);
       return;
     }
